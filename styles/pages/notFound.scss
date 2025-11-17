@@ -1,0 +1,33 @@
+@use "../tools/variables" as *;
+
+#notFound {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: "Monoton", sans-serif;
+    .board {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        height: auto;
+        width: auto;
+
+        padding: 20px;
+        font: 75px/75px Monoton, cursive;
+        text-align: center;
+        text-transform: uppercase;
+        text-shadow: 0 0 80px $darkblue, 0 0 30px #214ec2, 0 0 6px #0f3085;
+        color: $darkblue;
+        a {
+            font-size: 18px;
+            font-family: "Bebas Neue", sans-serif;
+        }
+    }
+
+    #error {
+        color: #fff;
+        text-shadow: 0 0 80px #ffffff, 0 0 30px #008000, 0 0 6px #0000ff;
+    }
+}

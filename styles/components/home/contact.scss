@@ -1,0 +1,184 @@
+@use "../../tools/variables" as *;
+
+#contact {
+    position: relative;
+    h2 {
+        text-align: left;
+    }
+
+    .contact-flex {
+        display: flex;
+        flex-direction: column;
+        &:nth-child(2) {
+            margin-top: 25px;
+        }
+        img {
+            margin: 0 auto 10px auto;
+            display: block;
+            width: 30px;
+            height: 30px;
+        }
+
+        .contact-social-media {
+            cursor: pointer;
+            transition: transform .2s;
+
+            &:hover {
+                transform: scale(1.1);
+            }
+            img {
+                width: 90px;
+                height: 90px;
+            }
+        }
+        p {
+            margin: auto 0;
+            color: $black;
+            font-size: 20px;
+        }
+    }
+    input {
+        width: 80%;
+        margin: 0 auto;
+        font-size: 20px;
+    }
+    .btn-black {
+        display: inline-block;
+        width: 120px;
+        border-radius: 25px;
+        margin: 20px auto 0 auto;
+    }
+
+    #firstContact,
+    #secondContact,
+    #thirdContact {
+        flex-direction: column;
+        justify-content: center;
+        padding: 25px;
+        background-color: $white;
+        border-radius: 50%;
+        width: 350px;
+        height: 350px;
+        display: none;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translateX(-50%) translateY(-50%);
+    }
+    #secondContact {
+        z-index: 5;
+        box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.5);
+        width: 360px;
+        height: 360px;
+    }
+    #clickMe {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translateX(-50%) translateY(-50%);
+        cursor: pointer;
+
+        .btn-whatsapp-pulse {
+            background: $white;
+            color: white;
+            width: 150px;
+            height: 150px;
+            font-size: 40px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            padding: 35px;
+            text-decoration: none;
+            border-radius: 50%;
+            animation-name: pulse;
+            animation-duration: 1.5s;
+            animation-timing-function: ease-out;
+            animation-iteration-count: infinite;
+            &:hover {
+                background: rgb(235, 235, 235);
+            }
+            img {
+                width: 60px;
+                height: 60px;
+                animation-name: trin;
+                animation-duration: 1.5s;
+                animation-timing-function: ease-out;
+                animation-iteration-count: infinite;
+            }
+        }
+        p {
+            color: $white;
+            margin-top: 15px;
+            font-size: 30px;
+        }
+    }
+    #spiral {
+        position: absolute;
+        top: calc(50% - 65vw);
+        left: -10vw;
+        width: 120vw;
+        height: 120vw;
+    }
+
+    /* Blob on center */
+    #blob-white-animated {
+        position: absolute;
+        top: calc(50% - 110px);
+        left: calc(50% - 80px);
+        width: 160px;
+        height: 160px;
+        background-color: $darkblue;
+        border-radius: 50%;
+        filter: blur(15px);
+
+        &:after {
+            position: relative;
+            display: block;
+            content: "";
+            width: 40px;
+            height: 40px;
+            background: $darkblue;
+            border-radius: 50%;
+            transform-origin: 50px 50px;
+            transform: rotate(50px);
+            animation: rotate 3.5s ease-in-out infinite;
+            filter: blur(3px);
+        }
+
+        &:before {
+            position: relative;
+            display: block;
+            content: "";
+            width: 80px;
+            height: 80px;
+            background: $darkblue;
+            border-radius: 50%;
+            transform-origin: 60px 60px;
+            transform: rotate(300px);
+            animation: rotate 3.5s ease-in-out 2s infinite;
+            filter: blur(3px);
+        }
+    }
+}
+/* ----- MEDIA QUERY ----- */
+@include sm {
+    #contact {
+        #spiral {
+            top: calc(50% - 320px);
+            left: calc(50% - 300px);
+            width: 600px;
+            height: 600px;
+        }
+    }
+}
+@include md {
+    #contact {
+        #spiral {
+            top: calc(50% - 420px);
+            left: calc(50% - 400px);
+            width: 800px;
+            height: 800px;
+        }
+    }
+}

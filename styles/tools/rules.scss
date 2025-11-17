@@ -1,0 +1,89 @@
+@use "variables" as *;
+
+.flex-direction-column {
+    flex-direction: column;
+}
+.flex-direction-column-reverse {
+    flex-direction: column-reverse;
+}
+
+.page {
+    position: relative;
+    min-height: 100vh;
+    z-index: 1;
+}
+
+
+a:hover {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul,
+ul li,
+li {
+    list-style-type: none;
+}
+
+img {
+    pointer-events: none;
+}
+.copy-icon {
+    cursor: pointer;
+}
+
+
+h2 {
+    font-size: 80px;
+    color: rgb(230, 230, 230);
+    position: relative;
+    z-index: 3;
+}
+/* ----- Media query ----- */
+@include sm {
+    .min-sm-flex-direction-column-reverse {
+        flex-direction: column-reverse;
+    }
+    .min-sm-flex-direction-column {
+        flex-direction: column;
+    }
+    h2 {
+        font-size: 100px;
+    }
+}
+
+@include md {
+    .min-md-flex-direction-column-reverse {
+        flex-direction: column-reverse;
+    }
+    .min-md-flex-direction-column {
+        flex-direction: column;
+    }
+    h2 {
+        font-size: 120px;
+    }
+}
+
+@include sm-landscape {
+}
+
+@include lg {
+    .min-lg-flex-direction-column-reverse {
+        flex-direction: column-reverse;
+    }
+    .min-lg-flex-direction-column {
+        flex-direction: column;
+    }
+    h2 {
+        font-size: 150px;
+    }
+}
+
+@include xl {
+    .min-xl-flex-direction-column-reverse {
+        flex-direction: column-reverse;
+    }
+    .min-xl-flex-direction-column {
+        flex-direction: column;
+    }
+}

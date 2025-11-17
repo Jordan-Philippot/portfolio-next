@@ -1,0 +1,252 @@
+@use "../../tools/variables" as *;
+
+#projects {
+  min-height: 100vh;
+  height: auto;
+  position: relative;
+  font-size: 120px;
+  overflow-x: hidden;
+  padding-bottom: 70px;
+
+  #blob1 {
+    position: absolute;
+    top: 0;
+    left: -35vw;
+    background: $lightblue;
+    background: linear-gradient(90deg, $lightblue 20%, rgba(28, 76, 255, 1) 83%);
+
+    width: 100vw;
+    height: 60vw;
+    border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%;
+    animation: morph 5s linear infinite;
+    display: block;
+  }
+
+  #blob2 {
+    position: absolute;
+    top: 0;
+    right: -35vw;
+    display: block;
+    background: $lightblue;
+    background: linear-gradient(90deg, rgba(28, 76, 255, 1) 20%, $lightblue 83%);
+    width: 100vw;
+    height: 60vw;
+    border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%;
+    animation: morph 5s linear infinite;
+    z-index: 1;
+  }
+
+  h2 {
+    padding-top: 50px;
+    margin-bottom: 50px;
+    text-align: right;
+  }
+
+  #projectsList {
+    position: relative;
+    text-align: center;
+    display: inline-block;
+    z-index: 2;
+
+    .oneProject {
+      position: relative;
+
+      cursor: pointer;
+
+      &:nth-child(1) {
+        .hoverContainer {
+          .imageProject {
+            background-image: url("../../../images/projects/netflux/modalhomepage.png");
+          }
+        }
+      }
+
+      &:nth-child(2) {
+        .hoverContainer {
+          .imageProject {
+            background-image: url("../../../images/projects/aliz/aliz.png");
+          }
+        }
+      }
+
+      &:nth-child(3) {
+        .hoverContainer {
+          .imageProject {
+            background-image: url("../../../images/projects/alizCalendar/meetingAlizCalendar.png");
+          }
+        }
+      }
+
+      &:nth-child(4) {
+        .hoverContainer {
+          .imageProject {
+            background-image: url("../../../images/projects/alizVerif/alizVerif.png");
+          }
+        }
+      }
+
+      &:nth-child(5) {
+        .hoverContainer {
+          .imageProject {
+            background-image: url("../../../images/projects/studhelp/studhelp.png");
+          }
+        }
+      }
+
+      &:nth-child(6) {
+        .hoverContainer {
+          .imageProject {
+            background-image: url("../../../images/projects/netflix/homeNetflix.png");
+            background-position: center;
+          }
+        }
+      }
+
+      &:nth-child(7) {
+        .hoverContainer {
+          .imageProject {
+            background-image: url("../../../images/projects/ted/homeTed.png");
+          }
+        }
+      }
+
+      .titleProject {
+        width: auto;
+        z-index: 2;
+        display: inline-block;
+        font-weight: 800;
+        margin-bottom: 20px;
+        font-size: 50px;
+
+        perspective: 80px;
+      }
+
+      // ----- Display project on title hover
+      .hoverContainer {
+        position: absolute;
+        display: none;
+        width: auto;
+        flex-direction: column;
+        height: auto;
+        top: -50px;
+        transform: translateX(-50%);
+        left: 50%;
+        z-index: 4;
+
+        .imageProject {
+          display: none;
+          transform: scale(0);
+          width: 50vw;
+          height: 50vw;
+          border-radius: 50%;
+          background-size: cover;
+        }
+
+        .infoProject {
+          display: none;
+          z-index: 3;
+          padding: 20px 70px;
+          background-color: rgba(0, 0, 0, 0.8);
+          transform: translateX(-100px);
+          backdrop-filter: blur(2px);
+          height: 50vw;
+          border-radius: 6px;
+          width: 99vw;
+
+          .container-info {
+            font-size: 12px;
+            font-family: $font-family-poppins;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100%;
+            opacity: 0;
+            transform: translateY(50px);
+
+            h3 {
+              font-family: $font-family-bebas-neue;
+              font-size: 22px;
+              font-weight: bold;
+            }
+
+            p {
+              margin: 15px 0;
+              text-align: center;
+              word-wrap: break-word;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+/* ----- MEDIA QUERY ----- */
+@include sm {
+  #projects {
+    #projectsList {
+      .oneProject {
+        .titleProject {
+          font-size: 60px;
+        }
+
+        // ----- Display project on title hover
+        .hoverContainer {
+          .infoProject {
+            .container-info {
+              font-size: 14px;
+
+              h3 {
+                font-size: 26px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@include md {
+  #projects {
+    #projectsList {
+      .oneProject {
+        .titleProject {
+          margin-bottom: 50px;
+          font-size: 70px;
+        }
+
+        // ----- Display project on title hover
+        .hoverContainer {
+          .imageProject {
+            width: 300px;
+            height: 300px;
+          }
+
+          .infoProject {
+            height: 300px;
+            width: 587px;
+
+            .container-info {
+              font-size: 16px;
+
+              h3 {
+                font-size: 30px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@include lg {
+  #projects {
+    #blob1,
+    #blob2 {
+      width: 75vw;
+    }
+  }
+}
