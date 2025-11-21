@@ -61,19 +61,19 @@ export default function OneProject({project}: OneProjectProps) {
         tl.to(hoverContainerRef.current, {
             boxShadow: "15px 15px 15px 1px rgba(255, 255, 255, 0.3)",
             duration: 0.2,
-            ease: Power1,
+            ease: Power1.easeOut,
         })
         tl.to(blockInfoRef.current, {
             opacity: 1,
             y: 0,
             duration: 0.2,
-            ease: Power1,
+            ease: Power1.easeOut,
         })
     }
 
     const hideImage = () => {
         const tl = gsap.timeline();
-        tl.to(hoverContainerRef.current, {display: "none", duration: 0.2, ease: Power1});
+        tl.to(hoverContainerRef.current, {display: "none", duration: 0.2, ease: Power1.easeOut});
     };
 
     return (

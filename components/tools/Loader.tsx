@@ -1,7 +1,7 @@
 import React, {useEffect, useState} from 'react'
 
 // Packages
-import gsap, {Power4} from 'gsap';
+import gsap, {Power1, Power4} from 'gsap';
 
 // Images
 import EllipseLogo from '../../images/logo.png'
@@ -28,8 +28,8 @@ export default function Loader() {
     useEffect(() => {
         setLoaded(true)
 
-        gsap.fromTo('#dev', {x: -500, opacity: 0}, {x: 0, opacity: 1, duration: 2, ease: Power4})
-        gsap.fromTo('#fullstack', {x: 500, opacity: 0}, {x: 0, opacity: 1, duration: 2, ease: Power4})
+        gsap.fromTo('#dev', {x: -500, opacity: 0}, {x: 0, opacity: 1, duration: 2, ease: Power4.easeOut})
+        gsap.fromTo('#fullstack', {x: 500, opacity: 0}, {x: 0, opacity: 1, duration: 2, ease: Power4.easeOut})
     }, [])
 
 

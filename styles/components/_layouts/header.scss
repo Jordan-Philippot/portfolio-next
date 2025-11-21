@@ -10,6 +10,21 @@
   /* ----- Define a height for NavBar -----*/
   height: 100px;
   /* -----and a transition time for a smooth appearence*/
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 60px; /* hauteur de la zone d’ombre */
+    pointer-events: none;
+
+    /* Ombre bleue vers le bas */
+    box-shadow: 0 0px 100px 0 rgba(0, 122, 255, 0.5);
+
+    /* On inverse l'ombre grâce au transform */
+    transform: translateY(-100%);
+  }
 
   * {
     text-decoration: none;
@@ -25,7 +40,8 @@
     // ----- Logo -----
     .navbar-brand {
       img {
-        width: 90px;
+        margin-top: 4px;
+        width: 80px;
         height: auto;
       }
     }

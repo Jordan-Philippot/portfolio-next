@@ -1,91 +1,125 @@
-import React, { useRef, useState } from "react";
+import React, {useEffect, useRef} from "react";
+import {aboutProjects, aboutSkills, aboutTools, SkillType} from "@/lib/constants/about";
+import Image from "next/image";
+import gsap, {Power2} from "gsap";
+import {ScrollTrigger} from "gsap/dist/ScrollTrigger";
 
-export default function About({ AboutComponentRef }) {
-  const [showSkills, setShowSkills] = useState(true);
+interface AboutProps {
+    ref: React.Ref<HTMLDivElement>,
+}
 
-  const smokyPresentationRef = useRef();
-  const smokyDescriptionRef = useRef();
+export default function About({ref}: AboutProps) {
+    const smokyPresentationRef = useRef<HTMLParagraphElement>(null);
+    const smokyDescriptionRef = useRef<HTMLParagraphElement>(null);
+    const infiniteRef = useRef<HTMLDivElement>(null);
 
-  return (
-    <section id="about" className="container-fluid" ref={AboutComponentRef}>
-      <h2>À propos</h2>
+    useEffect(() => {
+        gsap.registerPlugin(ScrollTrigger);
 
-      <div className="container-about">
-        <p id="about-presentation" ref={smokyPresentationRef}>
-          En tant que développeur Fullstack <b>JavaScript</b> et <b>PHP</b>,
-          j'ai fait le choix de me spécialiser sur la bibliothèque{" "}
-          <b>ReactJS</b> et le framework <b>Symfony</b>.
-          <br></br>
-          <br></br>
-          Depuis 2020, j'ai contribué à de nombreux projets, dont la création
-          des sites web de la start-up Ted Consulting (& Aliz), dans laquelle
-          j'ai effectué mon alternance, ainsi que la refonte complète d'un back-office chez Meilleurtaux Assurances.
-          <br /><br/>
-          Les compétences acquises durant ces 4 années me permettent aujourd'hui
-          de répondre tant aux problématiques techniques que clientèles, le tout
-          dans les plus brefs délais et dans une approche agile.
-          <br /><br/>
-          Mon appétence pour le front m'a également conféré une attention toute particulière à l'expérience utilisateur,
-          allant du design aux performances web, en passant par la mise en cache des données côté client de manière sécurisée.   
-        </p>
+        if (smokyDescriptionRef.current) {
+            const cards = smokyDescriptionRef.current.querySelectorAll<HTMLDivElement>('.card');
 
-        <div className="hr-dotted"></div>
+            gsap.fromTo(
+                cards,
+                {opacity: 0, y: 50, x: 50},
+                {
+                    opacity: 1,
+                    y: 0,
+                    ease: Power2.easeOut,
+                    duration: 0.8,
+                    stagger: 0.2,
+                    scrollTrigger: {
+                        trigger: smokyDescriptionRef.current,
+                        start: "top 70%",
+                        end: "bottom 20%",
+                        toggleActions: "play none none reverse",
+                    }
+                }
+            );
+        }
+    }, []);
 
-        <div id="about-description" ref={smokyDescriptionRef}>
-          <div className="description-choice">
-            <h3
-              className={`${showSkills ? "choice-active" : "choice-inactive"}`}
-              onClick={() => setShowSkills(true)}
-            >
-              Mes compétences
-            </h3>
-            <h3
-              className={`${showSkills ? "choice-inactive" : "choice-active"}`}
-              onClick={() => setShowSkills(false)}
-            >
-              Languages et outils{" "}
-            </h3>
-          </div>
+    return (
+        <section
+            id="about"
+            className={`container-fluid`}
+            ref={ref}
+        >
+            <h2>À propos</h2>
 
-          <div>
-            {showSkills ? (
-              <div className="revealScroll" id="skills">
-                <p>Méthode agile / Scrum</p>
-                <p>Web performance</p>
-                <p>Gestion du cache</p>
-                <p>Intégration Design system</p>
-                <p>API REST </p>
-                <p>Stripe (système de paiement CB / SEPA) </p>
-                <p>Création d'espace client & admin </p>
-                <p>Listeners d’entités</p>
-                <p>Modélisation de BDD </p>
-                <p>Création de webhook</p>
-                <p>CI/CD </p>
-                <p>Tâches CRON </p>
-                <p>Envoies automatisés de SMS / Email </p>
-                <p>Création / intégration de maquettes</p>
-              </div>
-            ) : (
-              <div className="revealScroll" id="langage">
-                <p>React </p>
-                <p>Typescript</p>
-                <p>Redux</p>
-                <p>React-Query</p>
-                <p>Symfony</p>
-                <p>Styled components</p>
-                <p>Jira</p>
-                <p>Github</p>
-                <p>GCP</p>
-                <p>SQL / NOSQL </p>
-                <p>GSAP animation</p>
-                <p>Scss </p>
-                <p>Figma</p>
-                <p>Brevo</p>
-              </div>
-            )}
-          </div>
-        </div>
-      </div>
-    </section>
-  );
+            <div className="container-about">
+                <p id="about-presentation" ref={smokyPresentationRef}>
+                    Développeur Fullstack <b>Javascript</b> et <b>PHP</b> depuis 5 ans, je travaille avec <b>React,
+                    Next.js, Node.js (Express)</b> et <b>Symfony</b> pour donner vie à des produits cohérents,
+                    structurés et durables.
+                    <br/>
+                    <br/>
+                    J’accorde une attention particulière à la lisibilité, à la modularité et à tout ce qui facilite la
+                    vie des utilisateurs… comme celle des développeurs.
+                    <br/>
+                    <br/>
+                    En 2024, j’ai rejoint Ikomobi, une agence digitale reconnue, où j’ai l’opportunité de travailler sur
+                    des projets ambitieux :
+                </p>
+
+
+                <div id="about-cards" ref={smokyDescriptionRef}>
+                    {aboutProjects.map((project, index) => (
+                        <div className="card" key={index}>
+                            <h3> {project?.title}</h3>
+                            <p>{project?.description}</p>
+                        </div>
+                    ))}
+                </div>
+
+                <p id="about-presentation" ref={smokyPresentationRef}>
+                    Avant cela, j’ai participé à la création des sites de la startup Ted Consulting (& Aliz), ainsi qu’à
+                    la refonte d’un back-office pour Meilleurtaux Assurances.
+                    <br/>
+                    <br/>
+                    Ces expériences m’ont permis de développer une double
+                    sensibilité: <b>technique</b> et <b>produit</b>,
+                    essentielle pour créer des solutions qui répondent réellement aux besoins des utilisateurs et des
+                    entreprises.
+                    <br/>
+                    <br/>
+                    Aujourd’hui, j’accompagne entreprises et startups dans la mise en place de solutions sur mesure,
+                    toujours avec un objectif clair :
+                    <br/>
+                    <b>apporter de la valeur</b>, rapidement et durablement.
+
+                </p>
+
+
+                <div className={"infinite-container"}>
+                    <div className={"infinite-section"}>
+                        <h3 className={"infinite-title"}>Compétences</h3>
+                        <div className="infinite-text" ref={infiniteRef}>
+                            <div className="track">
+                                {aboutSkills.map((skill: SkillType) => (
+                                    <span key={skill.id}>{skill.title}</span>
+                                ))}
+                                {aboutSkills.map((skill: SkillType) => (
+                                    <span key={`dup-${skill.id}`}>{skill.title}</span>
+                                ))}
+                            </div>
+                        </div>
+                    </div>
+                    <div className={"infinite-section"}>
+                        <h3 className={"infinite-title"}>Outils et Languages</h3>
+                        <div className="infinite-text" ref={infiniteRef}>
+                            <div className="track">
+                                {aboutTools.map((skill: SkillType) => (
+                                    <span key={skill.id}>{skill.title}</span>
+                                ))}
+                                {aboutTools.map((skill: SkillType) => (
+                                    <span key={`dup-${skill.id}`}>{skill.title}</span>
+                                ))}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    );
 }

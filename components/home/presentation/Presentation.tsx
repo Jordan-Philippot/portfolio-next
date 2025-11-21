@@ -1,15 +1,19 @@
 import React from "react";
 
 // ----- Images -----
-import Profile from "../../../images/AvatarMaker.png";
+import Profile from "../../../images/image_profil-removebg-preview.png";
 import Image from "next/image";
 
-export default function FirstBlock({PresentationComponentRef}) {
+interface PresentationProps {
+    ref: React.Ref<HTMLDivElement>,
+}
+
+export default function FirstBlock({ref}: PresentationProps) {
     return (
         <section
             id="home"
-            className="container-fluid"
-            ref={PresentationComponentRef}
+            className={`container-fluid`}
+            ref={ref}
         >
             <div className="content">
                 <div className="blob">
@@ -20,13 +24,13 @@ export default function FirstBlock({PresentationComponentRef}) {
                     <h1>
                         <strong>Jordan Philippot</strong>
                         <br/>
-                        Développeur Fullstack, expertise Front-end <b>&#123;React&#125;</b>
+                        Développeur Fullstack depuis 5 ans <b>&#123;React-Next-Node&#125;</b>, expertise Front-end
                         <br/>
                         concepteur d'applications web <b>&#123;Epitech&#125;</b>.
                     </h1>
                     <div id="home-contact">
                         <a
-                            href={process.env.REACT_APP_GITHUB_LINK}
+                            href={process.env.NEXT_PUBLIC_GITHUB_LINK}
                             target="_blank"
                             rel="noopener noreferrer"
                         >
@@ -40,7 +44,7 @@ export default function FirstBlock({PresentationComponentRef}) {
                             </svg>
                         </a>
                         <a
-                            href={process.env.REACT_APP_LINKEDIN_LINK}
+                            href={process.env.NEXT_PUBLIC_LINKEDIN_LINK}
                             target="_blank"
                             rel="noopener noreferrer"
                         >
@@ -107,7 +111,7 @@ export default function FirstBlock({PresentationComponentRef}) {
             {/* TEXT BACKGROUND */}
             <div className="text-background">
                 <p id="text-background-react">REACT</p>
-                <p id="text-background-symfony">SYMFONY</p>
+                <p id="text-background-node">NODE.JS</p>
             </div>
         </section>
     );

@@ -15,6 +15,7 @@ import {ScrollTrigger} from 'gsap/ScrollTrigger'
 
 export default function Home() {
 
+
     // ----- Refs -----
     const PresentationComponentRef = useRef<HTMLDivElement>(null)
     const ProjectsComponentRef = useRef<HTMLDivElement>(null)
@@ -66,42 +67,20 @@ export default function Home() {
         }
     }, [])
 
-    // ----- Scroll detection for About section -----
-    useEffect(() => {
-        const handleScroll = () => {
-            if (PresentationComponentRef.current && AboutComponentRef.current) {
-                const presentationHeight = PresentationComponentRef.current.offsetHeight
-                const aboutHeight = AboutComponentRef.current.offsetHeight
-                const scrollY = window.scrollY
-
-                if (
-                    scrollY > presentationHeight - window.innerHeight + 101 &&
-                    scrollY < presentationHeight - window.innerHeight + 101 + aboutHeight
-                ) {
-                    //  setIsScrolledAboutUs('true')
-                } else {
-                    //   setIsScrolledAboutUs('false')
-                }
-            }
-        }
-
-        window.addEventListener('scroll', handleScroll)
-        return () => window.removeEventListener('scroll', handleScroll)
-    }, [])
-
+ 
     return (
         <div id="homepage" className="page">
             {/* ----- PRESENTATION ----- */}
-            <PresentationComponent PresentationComponentRef={PresentationComponentRef}/>
+            <PresentationComponent ref={PresentationComponentRef}/>
 
             {/* ----- ABOUT ME ----- */}
-            <AboutComponent AboutComponentRef={AboutComponentRef}/>
+            <AboutComponent ref={AboutComponentRef}/>
 
             {/* ----- MY PROJECTS ----- */}
-            <ProjectsComponent ProjectsComponentRef={ProjectsComponentRef}/>
+            <ProjectsComponent ref={ProjectsComponentRef}/>
 
             {/* ----- CONTACT ME ----- */}
-            <ContactMeComponent ContactMeComponentRef={ContactMeComponentRef}/>
+            <ContactMeComponent ref={ContactMeComponentRef}/>
         </div>
     )
 }

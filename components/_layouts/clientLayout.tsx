@@ -11,14 +11,13 @@ interface ClientLayoutProps {
 }
 
 export default function ClientLayout({children}: ClientLayoutProps) {
-    const [loaded, setLoaded] = useState(false)
+    const [loaded, setLoaded] = useState<boolean>(false)
 
     const wavesRef = useRef<SVGSVGElement>(null)
 
     useEffect(() => {
         setTimeout(() => {
             setLoaded(true)
-
         }, 5000);
     }, [])
 

@@ -6,7 +6,7 @@ import Link from 'next/link'
 import Image from 'next/image'
 import Logo from '../../../images/logo.png'
 
-export default function HeaderTablet(): JSX.Element {
+export default function HeaderTablet() {
     const [nav, setNav] = useState<boolean>(false)
 
     // Toggle navbar open/close
@@ -32,7 +32,11 @@ export default function HeaderTablet(): JSX.Element {
             gsap.to(spans, {backgroundColor: 'black', duration: 0.2})
         } else {
             // Close menu
-            gsap.to(menu, {opacity: 0, duration: 0.3, onComplete: () => gsap.set(menu, {display: 'none'})})
+            gsap.to(menu, {
+                opacity: 0, duration: 0.3, onComplete: () => {
+                    gsap.set(menu, {display: 'none'})
+                }
+            })
             gsap.to(navElement, {backgroundColor: 'transparent', duration: 0.5})
             gsap.to(spans, {backgroundColor: 'white', duration: 0.5})
         }

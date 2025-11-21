@@ -10,6 +10,7 @@ $white: #ffffff;
 $turquoise: #b6f6ff;
 $lightblue: #7dabff;
 $darkblue: #4478ff;
+$cardblue: #4841FF;
 
 $yellow: #ffcf59;
 $orange: #ff9900;
@@ -21,7 +22,6 @@ $lightgreen: #ddfce8;
 $font-family-poppins: "Poppins", sans-serif;
 $font-family-bebas-neue: "Bebas Neue", sans-serif;
 $font-family-montserrat: "Montserrat", sans-serif;
-
 
 
 /* ----- Breakpoint values ----- */
@@ -43,41 +43,41 @@ $screen-xxl-min: 1500px;
 
 // Smartphone
 @mixin sm {
-    @media (min-width: #{$screen-sm-min}) and (min-height: #{$screen-sm-min}) {
-        @content;
-    }
+  @media (min-width: #{$screen-sm-min}) and (min-height: #{$screen-sm-min}) {
+    @content;
+  }
 }
 
 @mixin sm-landscape {
-    @media (max-width: #{$screen-lg-min}) and (max-height: #{$screen-sm-min}) {
-        @content;
-    }
+  @media (max-width: #{$screen-lg-min}) and (max-height: #{$screen-sm-min}) {
+    @content;
+  }
 }
 
 // Medium devices
 @mixin md {
-    @media (min-width: #{$screen-md-min}) {
-        @content;
-    }
+  @media (min-width: #{$screen-md-min}) {
+    @content;
+  }
 }
 
 // Large devices
 @mixin lg {
-    @media (min-width: #{$screen-lg-min}) {
-        @content;
-    }
+  @media (min-width: #{$screen-lg-min}) {
+    @content;
+  }
 }
 
 // Extra large devices
 @mixin xl {
-    @media (min-width: #{$screen-xl-min}) {
-        @content;
-    }
+  @media (min-width: #{$screen-xl-min}) {
+    @content;
+  }
 }
 
 // Xxl devices
 @mixin xxl {
-    @media (min-width: #{$screen-xxl-min}) {
-        @content;
-    }
+  @media (min-width: #{$screen-xxl-min}) {
+    @content;
+  }
 }

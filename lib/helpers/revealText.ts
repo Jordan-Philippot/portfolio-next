@@ -1,5 +1,5 @@
 // ----- Packages -----
-import gsap, {Power2, TweenVars} from 'gsap'
+import gsap, {Power2} from 'gsap'
 
 // ----- Constants -----
 import {animationDirection} from '../constants/animationDirection'
@@ -28,14 +28,14 @@ export const revealText = (
         {
             x: fromX,
             opacity: 0,
-        } as TweenVars,
+        } as gsap.TweenVars,
         {
             x: 0,
             opacity: 1,
             ease: Power2.easeOut,
             duration: duration,
             delay: delay,
-        } as TweenVars
+        } as gsap.TweenVars
     )
     tl.play()
 }

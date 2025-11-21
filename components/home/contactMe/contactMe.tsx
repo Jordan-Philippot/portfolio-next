@@ -16,16 +16,16 @@ import ModalContact from './ModalContact'
 import Image from "next/image";
 
 interface ContactMeProps {
-    ContactMeComponentRef: React.Ref<HTMLSectionElement>
+    ref: React.Ref<HTMLDivElement>,
 }
 
-export default function ContactMe({ContactMeComponentRef}: ContactMeProps) {
-    init(process.env.REACT_APP_EMAILJS_PK)
+export default function ContactMe({ref}: ContactMeProps) {
+    init(process.env.NEXT_PUBLIC_EMAILJS_PK as string)
 
-    const [openModal, setOpenModal] = useState(false)
+    const [openModal, setOpenModal] = useState<boolean>(false)
     const clickMeRef = useRef<HTMLDivElement>(null)
-    const [phone, setPhone] = useState('')
-    const [email, setEmail] = useState('')
+    const [phone, setPhone] = useState<string>('')
+    const [email, setEmail] = useState<string>('')
 
     useEffect(() => {
         gsap.fromTo('#spiral', {rotation: 0}, {rotation: 360, duration: 20, repeat: -1})
@@ -94,8 +94,8 @@ export default function ContactMe({ContactMeComponentRef}: ContactMeProps) {
     const contactSubmit = () => {
         emailjs
             .send(
-                process.env.REACT_APP_EMAILJS_SERVICE_GMAIL!,
-                process.env.REACT_APP_EMAILJS_TEMPLATE_CONTACT!,
+                process.env.NEXT_PUBLIC_EMAILJS_SERVICE_GMAIL!,
+                process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_CONTACT!,
                 data
             )
             .then(
@@ -110,7 +110,7 @@ export default function ContactMe({ContactMeComponentRef}: ContactMeProps) {
     }
 
     return (
-        <section id="contact" className="page" ref={ContactMeComponentRef}>
+        <section id="contact" className={`page`} ref={ref}>
             <div id="blob-white-animated"></div>
 
             {openModal && <ModalContact setOpenModal={setOpenModal}/>}
@@ -171,7 +171,7 @@ export default function ContactMe({ContactMeComponentRef}: ContactMeProps) {
             <div className="contact-type" id="thirdContact">
                 <div className="contact-flex">
                     <a
-                        href={process.env.REACT_APP_GITHUB_LINK}
+                        href={process.env.NEXT_PUBLIC_GITHUB_LINK}
                         target="_blank"
                         rel="noopener noreferrer"
                         className="contact-social-media"
@@ -181,7 +181,7 @@ export default function ContactMe({ContactMeComponentRef}: ContactMeProps) {
                 </div>
                 <div className="contact-flex">
                     <a
-                        href={process.env.REACT_APP_LINKEDIN_LINK}
+                        href={process.env.NEXT_PUBLIC_LINKEDIN_LINK}
                         target="_blank"
                         rel="noopener noreferrer"
                         className="contact-social-media"

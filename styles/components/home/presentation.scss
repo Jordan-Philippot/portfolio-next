@@ -20,6 +20,7 @@
     overflow: hidden;
     animation: morph 3s linear infinite, blob-appear 2s ease-in-out 1;
     visibility: hidden;
+    box-shadow: 0 0 60px 2px rgba(68, 120, 255, 0.5);
 
     &:hover {
       animation: morph-hover 4s linear infinite, blob-appear 0s ease-in-out 0;
@@ -78,12 +79,13 @@
       a {
         margin: 25px 12px;
         display: block;
+        flex-direction: column;
 
         svg {
           border: 1px solid $darkblue;
           padding: 10px;
-          width: 60px;
-          height: 60px;
+          width: 32px;
+          height: 32px;
           border-radius: 6px;
           fill: $darkblue;
 
@@ -113,15 +115,12 @@
     left: 0;
   }
 
-  #text-background-symfony {
+  #text-background-node {
     position: absolute;
     bottom: 20vh;
-    right: 0;
+    right: 1vw;
   }
 
-  // svg {
-  //     display: none;
-  // }
 }
 
 /* ----- MEDIA QUERY ----- */
@@ -150,7 +149,7 @@
       bottom: 50vh;
     }
 
-    #text-background-symfony {
+    #text-background-node {
       bottom: 20vh;
     }
   }
@@ -214,18 +213,9 @@
       bottom: 40vh;
     }
 
-    #text-background-symfony {
+    #text-background-node {
       bottom: 10vh;
     }
-
-    // svg {
-    //     display: block;
-    //     position: absolute;
-    //     z-index: 5;
-    //     bottom: 0;
-    //     left: 50%;
-    //     transform: translateX(-50%);
-    // }
   }
 }
 
@@ -243,12 +233,12 @@
     }
 
     #text-background-react {
-      top: 10vh;
-      bottom: unset;
+      top: -100px !important;
+      bottom: unset !important;
     }
 
-    #text-background-symfony {
-      bottom: 1vh;
+    #text-background-node {
+      bottom: -100px !important;
     }
   }
 }

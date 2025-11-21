@@ -9,8 +9,11 @@ import {myProjects} from '@/lib/constants/projects'
 // ----- Packages -----
 import gsap, {Power2} from 'gsap'
 
+interface ProjectsProps {
+    ref: React.Ref<HTMLDivElement>,
+}
 
-export default function Projects({ProjectsComponentRef}) {
+export default function Projects({ref}: ProjectsProps) {
 
     const sections = document.querySelectorAll('.oneProject');
 
@@ -33,7 +36,7 @@ export default function Projects({ProjectsComponentRef}) {
             {
                 x: 0,
                 opacity: 1,
-                ease: Power2,
+                ease: Power2.easeOut,
                 duration: 2
             }
         );
@@ -41,7 +44,11 @@ export default function Projects({ProjectsComponentRef}) {
 
 
     return (
-        <section id="projects" className="container-fluid" ref={ProjectsComponentRef}>
+        <section
+            id="projects"
+            className={`container-fluid`}
+            ref={ref}
+        >
 
             <div id="blob1"></div>
             <div id="blob2"></div>

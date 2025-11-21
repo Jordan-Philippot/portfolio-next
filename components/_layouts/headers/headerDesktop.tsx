@@ -9,7 +9,7 @@ export default function HeaderDesktop() {
             <nav className="navbar navbar-expand-xl">
                 {/* ----- Logo ----- */}
                 <Link className="navbar-brand" href="/">
-                    <Image alt={"Logo Jordan Philippot"} src={Logo} width={247} height={239}/>
+                    <Image alt={"Logo Jordan Philippot"} src={Logo} width={60} height={60}/>
                 </Link>
 
                 <div className="collapse navbar-collapse">
