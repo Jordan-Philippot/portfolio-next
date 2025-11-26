@@ -18,12 +18,12 @@
     height: 250px;
     border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%;
     overflow: hidden;
-    animation: morph 3s linear infinite, blob-appear 2s ease-in-out 1;
+    animation: morph 8s linear infinite, blob-appear 2s ease-in-out 1;
     visibility: hidden;
     box-shadow: 0 0 60px 2px rgba(68, 120, 255, 0.5);
 
     &:hover {
-      animation: morph-hover 4s linear infinite, blob-appear 0s ease-in-out 0;
+      animation: morph-hover 8s linear infinite, blob-appear 0s ease-in-out 0;
     }
 
     img {

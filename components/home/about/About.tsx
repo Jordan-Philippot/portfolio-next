@@ -25,12 +25,13 @@ export default function About({ref}: AboutProps) {
                 {
                     opacity: 1,
                     y: 0,
+                    x: 0,
                     ease: Power2.easeOut,
                     duration: 0.8,
                     stagger: 0.2,
                     scrollTrigger: {
                         trigger: smokyDescriptionRef.current,
-                        start: "top 70%",
+                        start: "top 90%",
                         end: "bottom 20%",
                         toggleActions: "play none none reverse",
                     }

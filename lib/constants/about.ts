@@ -20,19 +20,19 @@ export const aboutProjects: AboutProjectType[] = [
         id: 1,
         title: "E-COMMERCE",
         description: "Refonte complète du front-end avec implémentation d’un rendu côté serveur (SSR) optimisé, pour un grand groupe du retail belge.",
-        logo: require("../../images/projects/netflix/logoNetflix.png"),
+        logo: require("@/public/images/projects/netflix/logoNetflix.png"),
     },
     {
         id: 2,
         title: "CMS INTERNE",
         description: "Développement complet d'un cms avec bo modulaire, système de templating et bibliothèque de type google drive, pensé pour les équipes métier",
-        logo: require("../../images/projects/netflix/logoNetflix.png"),
+        logo: require("@/public/images/projects/netflix/logoNetflix.png"),
     },
     {
         id: 3,
         title: "PLATEFORME DE SYNERGIE",
         description: "Maintenance, refonte et évolution d’une plateforme permettant la synergie d'entreprises au sein d’un grand groupe du retail français",
-        logo: require("../../images/projects/netflix/logoNetflix.png"),
+        logo: require("@/public/images/projects/netflix/logoNetflix.png"),
     },
 ];
 

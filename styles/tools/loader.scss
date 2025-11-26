@@ -5,7 +5,7 @@ $particleSize: 250px;
 $lapDuration: 5s;
 $shadowColor: rgb(255, 255, 255);
 
-/*----- If i want double color in circle box shadow ----- */
+/*----- double color in circle box shadow ----- */
 $shadowOne: #ffffff36;
 $shadowTwo: #ffffff36;
 
@@ -24,7 +24,7 @@ $shadowTwo: #ffffff36;
   100% {
     transform: scale(0.1) translate(0px, 5px);
     opacity: 0;
-    box-shadow: inset 0px 0px 0px $shadowOne, inset 0px 0px 0px $shadowTwo;
+    box-shadow: inset 0 0 0 $shadowOne, inset 0 0 0 $shadowTwo;
   }
 }
 
@@ -66,7 +66,7 @@ $shadowTwo: #ffffff36;
   }
   55% {
     transform: translate(-50%, -50%) scale(0.94);
-    box-shadow: 0px 0 0 rgba($shadowColor, 0.7);
+    box-shadow: 0 0 0 rgba($shadowColor, 0.7);
   }
   60% {
     transform: translate(-50%, -50%) scale(0.9);
@@ -197,6 +197,19 @@ $shadowTwo: #ffffff36;
     font-size: 3.5rem;
     position: absolute;
     opacity: 0;
+    @include sm {
+      font-size: 5rem;
+    }
+    @include sm-landscape {
+      font-size: 4rem;
+    }
+    @include lg {
+      font-size: 7.5rem;
+    }
+
+    @include xl {
+      font-size: 10rem;
+    }
   }
 
   #dev {
@@ -216,38 +229,5 @@ $shadowTwo: #ffffff36;
   }
 }
 
-/* ----- Media query ----- */
-@include sm {
-  #loader {
-    .title-loader {
-      font-size: 5rem;
-    }
-  }
-}
 
-// @include md {
-// }
 
-@include sm-landscape {
-  #loader {
-    .title-loader {
-      font-size: 4rem;
-    }
-  }
-}
-
-@include lg {
-  #loader {
-    .title-loader {
-      font-size: 7.5rem;
-    }
-  }
-}
-
-@include xl {
-  #loader {
-    .title-loader {
-      font-size: 10rem;
-    }
-  }
-}

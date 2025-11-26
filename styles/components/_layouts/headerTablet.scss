@@ -5,6 +5,7 @@
   position: fixed;
   width: 100vw;
   top: 0;
+  left: 0;
 
   * {
     font-family: $font-family-bebas-neue;
@@ -16,9 +17,9 @@
   }
 
   nav {
-    // background-color: white;
-    padding: 1.5vh 10vw;
+    padding: 1.5vh 0;
     overflow-x: hidden;
+
 
     .navbar-brand {
       img {
@@ -32,6 +33,10 @@
       color: transparent !important;
       box-sizing: unset;
       background-color: transparent;
+      position: absolute;
+      top: 16px;
+      right: 16px;
+
 
       .toggler-span {
         width: 35px;
@@ -49,7 +54,9 @@
 
     .navbar-nav {
       padding-bottom: 10px;
-      // li
+      margin-left: -8px;
+
+
       .nav-item {
         font-weight: bold;
         margin: unset;

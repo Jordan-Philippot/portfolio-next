@@ -5,7 +5,7 @@ import Link from "next/link";
 import Image from "next/image";
 
 // Images
-import Logo from "../../images/logo.png";
+import Logo from "@/public/images/logo.png";
 
 // Packages
 import gsap from "gsap";

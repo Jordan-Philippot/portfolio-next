@@ -1,16 +1,15 @@
 import React from 'react'
 
-// ----- Component -----
-import OneProject from './OneProject'
 
 // ----- Services -----
 import {myProjects} from '@/lib/constants/projects'
 
 // ----- Packages -----
 import gsap, {Power2} from 'gsap'
+import GsapCarousel from "@/components/home/myProjects/ProjetsCarousel";
 
 interface ProjectsProps {
-    ref: React.Ref<HTMLDivElement>,
+    ref: React.Ref<HTMLDivElement> | undefined,
 }
 
 export default function Projects({ref}: ProjectsProps) {
@@ -49,19 +48,12 @@ export default function Projects({ref}: ProjectsProps) {
             className={`container-fluid`}
             ref={ref}
         >
-
             <div id="blob1"></div>
             <div id="blob2"></div>
 
-
             <h2>Mes Projets</h2>
 
-            <div id="projectsList">
-                {myProjects.map((project) =>
-                    <OneProject key={project.id} project={project}/>
-                )}
-            </div>
-
+            <GsapCarousel slides={myProjects}/>
         </section>
     )
 }

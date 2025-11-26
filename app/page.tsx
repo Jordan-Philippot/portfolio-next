@@ -6,7 +6,7 @@ import {useEffect, useRef} from 'react'
 import PresentationComponent from '../components/home/presentation/Presentation'
 import ProjectsComponent from '../components/home/myProjects/Projects'
 import AboutComponent from '../components/home/about/About'
-import ContactMeComponent from '../components/home/contactMe/contactMe'
+import ContactMeComponent from '../components/home/contactMe/ContactMe'
 
 // ----- Packages -----
 import gsap, {Power2} from 'gsap'
@@ -67,7 +67,7 @@ export default function Home() {
         }
     }, [])
 
- 
+
     return (
         <div id="homepage" className="page">
             {/* ----- PRESENTATION ----- */}

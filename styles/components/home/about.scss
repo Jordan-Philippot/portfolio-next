@@ -16,14 +16,16 @@
     font-family: $font-family-montserrat;
     z-index: 3;
     position: relative;
-    width: 80vw;
+    width: 100%;
     margin: 100px auto;
+
 
     #about-presentation {
       font-size: 22px;
       margin-bottom: 80px;
-      font-family: "Bebas Neue", sans-serif;
+      font-family: $font-family-bebas-neue;
       letter-spacing: 1.4px;
+      padding: 0 10%;
 
       b {
         color: $darkblue;
@@ -32,26 +34,34 @@
 
     #about-cards {
       display: flex;
+      flex-direction: column;
       justify-content: space-between;
       font-size: 16px;
-      margin: 0 auto 80px;
+      margin: 0 auto 80px auto;
       gap: 32px;
+
+      @include lg {
+        flex-direction: row;
+      }
 
       .card {
         display: flex;
         flex-direction: column;
         justify-content: start;
-        width: 350px;
+        max-width: 100%;
         border: 1px solid $cardblue;
-        // box-shadow: 0 5px 20px 1px rgba(72, 65, 255, 0.2);
         border-radius: 16px;
-        padding: 16px 32px 32px 32px;
+        padding: 8px 16px 16px 16px;
         text-align: center;
         background-color: #101010;
 
+        @include lg {
+          width: 350px;
+          padding: 16px 32px 32px 32px;
+        }
+
         h3 {
           font-size: 16px;
-
         }
 
         p {
@@ -60,75 +70,54 @@
           font-weight: 600;
         }
       }
-
-
     }
 
     p {
       text-align: left;
     }
 
-  }
-}
+    .infinite-container {
+      display: flex;
+      flex-direction: column;
+      gap: 48px;
 
-/* ----- MEDIA QUERY ----- */
+      .infinite-title {
+        text-align: left;
+        font-size: 32px;
+        text-transform: uppercase;
+        margin-bottom: 40px;
+      }
 
-@include md {
-  #about {
-    .container-about {
-      #about-cards {
+      .infinite-text {
+        overflow: hidden;
+        white-space: nowrap;
+        position: relative;
+        padding: 48px 0;
+        box-shadow: 0 0 8px 1px rgba(72, 65, 255, 0.3);
+        background-color: #101010;
+        width: 100vw;
+        font-size: 18px;
 
+        .track {
+          display: inline-block;
+          white-space: nowrap;
+          animation: scroll 35s linear infinite;
+        }
+
+        span {
+          display: inline-block;
+          padding: 0 1rem;
+          text-transform: uppercase;
+          transition: transform 0.3s ease;
+
+          &:hover {
+            transform: scale(1.2);
+            text-shadow: 0 1px 16px $darkblue;
+          }
+        }
       }
     }
   }
-}
-
-@include lg {
-  #about {
-    .container-about {
-      width: 80vw;
-    }
-  }
-}
-
-.infinite-container {
-  display: flex;
-  flex-direction: column;
-  gap: 48px;
-
-
-  .infinite-title {
-    text-align: left;
-    font-size: 32px;
-    text-transform: uppercase;
-    margin-bottom: 40px;
-  }
-
-  .infinite-text {
-    overflow: hidden;
-    white-space: nowrap;
-    position: relative;
-    padding: 48px 0;
-    box-shadow: 0 0 8px 1px rgba(72, 65, 255, 0.3);
-    // border: 1px solid rgba(72, 65, 255, 0.2);
-    background-color: #101010;
-    width: 100vw;
-    margin-left: -10vw;
-    font-size: 18px;
-
-    .track {
-      display: inline-block;
-      white-space: nowrap;
-      animation: scroll 35s linear infinite;
-    }
-
-    span {
-      display: inline-block;
-      padding: 0 1rem;
-      text-transform: uppercase;
-    }
-  }
-
 }
 
 

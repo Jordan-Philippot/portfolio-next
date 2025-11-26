@@ -20,7 +20,7 @@
     pointer-events: none;
 
     /* Ombre bleue vers le bas */
-    box-shadow: 0 0px 100px 0 rgba(0, 122, 255, 0.5);
+    box-shadow: 0 0 200px 0 rgba(0, 122, 255, 0.5);
 
     /* On inverse l'ombre grâce au transform */
     transform: translateY(-100%);

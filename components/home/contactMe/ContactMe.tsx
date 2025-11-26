@@ -5,15 +5,15 @@ import gsap, {Power4} from 'gsap'
 import emailjs, {init} from '@emailjs/browser'
 
 // ----- Images -----
-import PhoneSvg from '../../../images/contact/phone.svg'
-import SendSvg from '../../../images/contact/send.svg'
-import GithubSvg from '../../../images/contact/github.svg'
-import LinkedinSvg from '../../../images/contact/linkedin.svg'
-import Spiral from '../../../images/spiral.svg'
+import Spiral from '@/public/images/spiral.svg'
 
 // ----- Component -----
 import ModalContact from './ModalContact'
 import Image from "next/image";
+import Github from "@/components/icons/Github";
+import LinkedIn from "@/components/icons/LinkedIn";
+import Phone from "@/components/icons/Phone";
+import Send from "@/components/icons/Send";
 
 interface ContactMeProps {
     ref: React.Ref<HTMLDivElement>,
@@ -120,25 +120,25 @@ export default function ContactMe({ref}: ContactMeProps) {
 
             <div id="clickMe" onClick={showContact} ref={clickMeRef}>
                 <div className="btn-whatsapp-pulse">
-                    <Image src={PhoneSvg} alt="téléphone" width={100} height={100}/>
+                    <Phone width={100} height={100}/>
                 </div>
                 <p>Répondre</p>
             </div>
 
             <div className="contact-type" id="firstContact">
                 <div className="contact-flex">
-                    <Image src={SendSvg} alt="arobase" width={40} height={40}/>
+                    <Send width={40} height={40}/>
                     <p>jordan.philippot.pro@gmail.com</p>
                 </div>
                 <div className="contact-flex">
-                    <Image src={PhoneSvg} alt="téléphone" width={40} height={40}/>
+                    <Phone width={40} height={40}/>
                     <p>07 81 19 74 38</p>
                 </div>
             </div>
 
             <div className="contact-type" id="secondContact">
                 <div className="contact-flex">
-                    <Image src={PhoneSvg} alt="formulaire" width={40} height={40}/>
+                    <Phone width={40} height={40}/>
                     <input
                         value={phone}
                         id="phone"
@@ -151,7 +151,7 @@ export default function ContactMe({ref}: ContactMeProps) {
                 </div>
 
                 <div className="contact-flex">
-                    <Image src={SendSvg} alt="formulaire" width={40} height={40}/>
+                    <Send width={40} height={40}/>
                     <input
                         value={email}
                         id="email"
@@ -176,7 +176,7 @@ export default function ContactMe({ref}: ContactMeProps) {
                         rel="noopener noreferrer"
                         className="contact-social-media"
                     >
-                        <Image src={GithubSvg} alt="github" width={40} height={40}/>
+                        <Github width={40} height={40}/>
                     </a>
                 </div>
                 <div className="contact-flex">
@@ -186,7 +186,7 @@ export default function ContactMe({ref}: ContactMeProps) {
                         rel="noopener noreferrer"
                         className="contact-social-media"
                     >
-                        <Image src={LinkedinSvg} alt="linkedin" width={40} height={40}/>
+                        <LinkedIn width={40} height={40}/>
                     </a>
                 </div>
             </div>
