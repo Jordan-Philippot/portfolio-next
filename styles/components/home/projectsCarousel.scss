@@ -48,7 +48,7 @@
           height: 120px;
           margin-left: 30px;
           background-size: cover;
-          background-position: center;
+          background-position: 50% 0;
           transform: perspective(200px) rotateX(45deg) scaleY(1);
           transform-origin: top center;
           z-index: 1;
@@ -59,6 +59,26 @@
 
           mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.8), transparent);
           -webkit-mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.8), transparent);
+
+          animation: reflectionScroll 10s linear infinite;
+        }
+
+        @keyframes reflectionScroll {
+          0% {
+            background-position: 50% 0%;
+          }
+          25% {
+            background-position: 55% 25%;
+          }
+          50% {
+            background-position: 50% 50%;
+          }
+          75% {
+            background-position: 45% 75%;
+          }
+          100% {
+            background-position: 50% 0%;
+          }
         }
       }
 

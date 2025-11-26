@@ -34,27 +34,31 @@
 
     #about-cards {
       display: flex;
-      flex-direction: column;
-      justify-content: space-between;
+
+      max-width: 100%;
+      flex-wrap: wrap;
+      justify-content: center;
       font-size: 16px;
       margin: 0 auto 80px auto;
       gap: 32px;
+      @include md {
 
-      @include lg {
-        flex-direction: row;
       }
+
 
       .card {
         display: flex;
         flex-direction: column;
         justify-content: start;
-        max-width: 100%;
+        max-width: 80%;
         border: 1px solid $cardblue;
         border-radius: 16px;
         padding: 8px 16px 16px 16px;
         text-align: center;
         background-color: #101010;
-
+        @include md {
+          width: 300px;
+        }
         @include lg {
           width: 350px;
           padding: 16px 32px 32px 32px;
