@@ -35,7 +35,7 @@ export const myProjects: Project[] = [
         tools: "React • Typescript • React-query • Symfony • Sass",
         other: "Tâches cron | Listener | Webhook | Bucket AWS",
         logo: require("@/public/images/projects/netflix/logoNetflix.webp"),
-        link: "https://netflix-comedy.vercel.app",
+        link: false,
         github: "https://github.com/Jordan-Philippot/Netflix-comedy",
         isMediaDesktop: true,
         background: "/images/projects/netflux/modalhomepage.webp",
