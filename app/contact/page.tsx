@@ -32,7 +32,7 @@ export default function Contact() {
                         title: metadata.title as string,
                         description: metadata.description as string,
                         path: "/contact",
-                        image: "/images/logo.png",
+                        image: "/images/logo.webp",
                         sameAs: [
                             process.env.NEXT_PUBLIC_LINKEDIN_LINK as string,
                             process.env.NEXT_PUBLIC_GITHUB_LINK as string,

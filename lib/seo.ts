@@ -21,7 +21,7 @@ export function generateMetadata({
                                      title,
                                      description,
                                      path = "/",
-                                     image = "/images/image_profil.jpeg",
+                                     image = "/images/image_profile.webp",
                                      type = "website",
                                      keywords = [],
                                      publishedTime,
@@ -105,7 +105,7 @@ export function generateJsonLD(type: JsonLdType, data: BaseJsonLd): string {
                 publisher: {
                     "@type": "Organization",
                     name: name,
-                    logo: {"@type": "ImageObject", url: `${BASE_URL}/images/logo.png`},
+                    logo: {"@type": "ImageObject", url: `${BASE_URL}/images/logo.webp`},
                 },
             };
             break;
@@ -120,13 +120,13 @@ export function generateJsonLD(type: JsonLdType, data: BaseJsonLd): string {
                     "@type": "Organization",
                     name: name,
                     url: BASE_URL,
-                    logo: {"@type": "ImageObject", url: `${BASE_URL}/images/logo.png`},
+                    logo: {"@type": "ImageObject", url: `${BASE_URL}/images/logo.webp`},
                 },
                 mainEntity: {
                     "@type": "Person",
                     name: "Jordan Philippot",
                     jobTitle: "Développeur fullstack - Javascript",
-                    image: data.image || `${BASE_URL}/images/image_profil.jpeg`,
+                    image: data.image || `${BASE_URL}/images/image_profile.webp`,
                     sameAs: data.sameAs || [],
                 },
             };
@@ -145,7 +145,7 @@ export function generateJsonLD(type: JsonLdType, data: BaseJsonLd): string {
                 publisher: {
                     "@type": "Organization",
                     name: name,
-                    logo: {"@type": "ImageObject", url: `${BASE_URL}/images/logo.png`},
+                    logo: {"@type": "ImageObject", url: `${BASE_URL}/images/logo.webp`},
                 },
                 datePublished: new Date().toISOString(),
             };
@@ -160,7 +160,7 @@ export function generateJsonLD(type: JsonLdType, data: BaseJsonLd): string {
                 provider: {
                     "@type": "Organization",
                     name: name,
-                    logo: {"@type": "ImageObject", url: `${BASE_URL}/images/logo.png`},
+                    logo: {"@type": "ImageObject", url: `${BASE_URL}/images/logo.webp`},
                 },
             };
             break;

@@ -44,7 +44,7 @@ export default function LegalNotice() {
                         title: metadata.title as string,
                         description: metadata.description as string,
                         path: "/mentions-legales",
-                        image: "/images/logo.png",
+                        image: "/images/logo.webp",
                         sameAs: [
                             "https://www.linkedin.com/in/jordan-philippot",
                             "https://github.com/jordanphilippot",

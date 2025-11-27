@@ -4,7 +4,7 @@ import React, {useEffect, useState} from 'react'
 import gsap, {Power1, Power4} from 'gsap';
 
 // Images
-import EllipseLogo from '@/public/images/logo.png'
+import EllipseLogo from '@/public/images/logo.webp'
 
 // Components
 import Cursor from './Cursor';

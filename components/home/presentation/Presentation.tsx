@@ -1,7 +1,7 @@
 import React from "react";
 
 // ----- Images -----
-import Profile from "@/public/images/image_profil-removebg-preview.png";
+import Profile from "@/public/images/image_profile-removebg-preview.webp";
 import Image from "next/image";
 import Cv from "@/components/icons/Cv";
 import Send from "@/components/icons/Send";

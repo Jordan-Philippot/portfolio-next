@@ -34,7 +34,7 @@ export default function Home() {
                         title: metadata.title as string,
                         description: metadata.description as string,
                         path: "/",
-                        image: "/images/logo.png",
+                        image: "/images/logo.webp",
                     }),
                 }}
             />
