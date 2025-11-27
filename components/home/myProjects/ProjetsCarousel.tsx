@@ -3,7 +3,7 @@ import {useEffect, useRef, useState} from "react";
 import gsap from "gsap";
 import Draggable from "gsap/Draggable";
 
-import type {Project} from "@/lib/constants/projects";
+import type {Project} from "@/lib/data/projects";
 import Link from "next/link";
 import ArrowRight from "@/components/icons/ArrowRight";
 

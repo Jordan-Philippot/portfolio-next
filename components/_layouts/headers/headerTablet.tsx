@@ -73,7 +73,7 @@ export default function HeaderTablet() {
                         <div className="dropdown-divider"></div>
 
                         <li className="nav-item">
-                            <Link href="/#home" onClick={toggleLink}>
+                            <Link href="/" onClick={toggleLink}>
                                 Accueil
                             </Link>
                         </li>
@@ -96,6 +96,13 @@ export default function HeaderTablet() {
                         <li className="nav-item">
                             <Link href="/#contact" onClick={toggleLink}>
                                 Contact
+                            </Link>
+                        </li>
+                        <div className="dropdown-divider"></div>
+
+                        <li className="nav-item">
+                            <Link href="/mentions-legales" onClick={toggleLink}>
+                                Mentions Légales
                             </Link>
                         </li>
                     </ul>

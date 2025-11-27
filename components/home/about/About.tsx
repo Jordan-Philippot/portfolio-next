@@ -1,5 +1,5 @@
 import React, {useEffect, useRef} from "react";
-import {aboutProjects, aboutSkills, aboutTools, SkillType} from "@/lib/constants/about";
+import {aboutProjects, aboutSkills, aboutTools, SkillType} from "@/lib/data/about";
 import Image from "next/image";
 import gsap, {Power2} from "gsap";
 import {ScrollTrigger} from "gsap/dist/ScrollTrigger";
@@ -43,7 +43,6 @@ export default function About({ref}: AboutProps) {
     return (
         <section
             id="about"
-            className={`container-fluid`}
             ref={ref}
         >
             <h2>À propos</h2>

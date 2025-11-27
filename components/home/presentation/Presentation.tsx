@@ -17,7 +17,6 @@ export default function FirstBlock({ref}: PresentationProps) {
     return (
         <section
             id="home"
-            className={`container-fluid`}
             ref={ref}
         >
             <div className="content">

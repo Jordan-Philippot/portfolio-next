@@ -1,34 +1,40 @@
 @use "variables" as *;
 
 .btn-default {
-    font-size: 20px;
-    text-decoration: none;
-    border-radius: 6px;
-    padding: 10px 25px;
-    display: inline-block;
-    border: none;
+  font-size: 16px;
+  text-decoration: none;
+  border-radius: 8px;
+  padding: 8px 24px;
+  display: inline-block;
+  border: none;
 }
 
 .btn-darkBlue {
-    background-color: $darkblue;
-    &:hover {
-        background-color: $lightblue;
-    }
+  background-color: $darkblue;
+
+  &:hover {
+    background-color: $lightblue;
+  }
 }
-.btn-black{
-    color: $white;
-    background-color: $black;
-    &:hover {
-        background-color: rgb(50, 50, 50);
-    }
+
+.btn-black {
+  color: $white;
+  background-color: $black;
+
+  &:hover {
+    background-color: rgb(50, 50, 50);
+  }
 }
+
 input {
-    border-radius: 25px;
-    padding: 5px 15px;
-    border: 1px solid rgb(150, 150, 150);
-    outline: none;
-    &:focus,
-    &:active {
-        border: 1px solid rgba(68, 121, 255, 0.5);
-    }
+  border-radius: 24px;
+  padding: 8px 16px;
+  border: 1px solid rgb(150, 150, 150);
+  outline: none;
+
+  &:focus,
+  &:active {
+    border: 1px solid $darkblue;
+
+  }
 }

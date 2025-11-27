@@ -100,6 +100,10 @@ $shadowTwo: #ffffff36;
 }
 
 #loader {
+  overflow-x: hidden;
+  width: 100vw;
+  height: 100vh;
+  position: relative;
   /* Blob on center */
   #blob-white-animated {
     position: absolute;
@@ -149,23 +153,23 @@ $shadowTwo: #ffffff36;
     top: 50%;
     left: 50%;
     z-index: 1;
-  }
 
-  i {
-    display: block;
-    position: absolute;
-    width: $particleSize;
-    height: $particleSize;
-    left: - calc($particleSize / 2);
-    top: - calc($particleSize / 2);
-    border-radius: $particleSize;
-    opacity: 0;
+    i {
+      display: block;
+      position: absolute;
+      width: $particleSize;
+      height: $particleSize;
+      left: - calc($particleSize / 2);
+      top: - calc($particleSize / 2);
+      border-radius: $particleSize;
+      opacity: 0;
 
-    animation-name: scale;
-    animation-duration: $lapDuration;
-    animation-iteration-count: 5;
-    animation-timing-function: linear;
-    animation-direction: alternate;
+      animation-name: scale;
+      animation-duration: $lapDuration;
+      animation-iteration-count: 5;
+      animation-timing-function: linear;
+      animation-direction: alternate;
+    }
   }
 
   #loader-logo {

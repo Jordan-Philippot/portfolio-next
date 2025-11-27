@@ -1,86 +1,43 @@
-'use client'
+import HomeClient from "@/app/homeClient";
+import {generateJsonLD, generateMetadata} from "@/lib/seo";
+import Script from "next/script";
 
-import {useEffect, useRef} from 'react'
 
-// ----- Components -----
-import PresentationComponent from '../components/home/presentation/Presentation'
-import ProjectsComponent from '../components/home/myProjects/Projects'
-import AboutComponent from '../components/home/about/About'
-import ContactMeComponent from '../components/home/contactMe/ContactMe'
-
-// ----- Packages -----
-import gsap, {Power2} from 'gsap'
-import {ScrollTrigger} from 'gsap/ScrollTrigger'
-
+export const metadata = generateMetadata({
+    title: "Jordan Philippot – Développeur fullstack JavaScript & PHP | 5 ans d'expérience",
+    description:
+        "Développeur Full-Stack spécialisé en JavaScript (React, Node.js) et PHP (Symfony) avec 5 ans d’expérience. Création d’applications web performantes, modernes et scalables.",
+    path: "/",
+    keywords: [
+        "développeur fullstack",
+        "javascript",
+        "php",
+        "react",
+        "node js",
+        "express",
+        "symfony",
+    ],
+});
 
 export default function Home() {
-
-
-    // ----- Refs -----
-    const PresentationComponentRef = useRef<HTMLDivElement>(null)
-    const ProjectsComponentRef = useRef<HTMLDivElement>(null)
-    const AboutComponentRef = useRef<HTMLDivElement>(null)
-    const ContactMeComponentRef = useRef<HTMLDivElement>(null)
-
-    gsap.registerPlugin(ScrollTrigger)
-
-    useEffect(() => {
-        gsap.to('.blob', {visibility: 'visible', delay: 0.3})
-    }, [])
-
-    // ----- Title animation -----
-    useEffect(() => {
-        const titles = document.querySelectorAll<HTMLHeadingElement>('h2')
-        titles.forEach((title) => {
-            const tl = gsap.timeline({
-                scrollTrigger: {
-                    trigger: title,
-                    start: 'top-=700',
-                    toggleActions: 'play none none reverse',
-                    end: () => `+=${title.clientHeight / 2}`,
-                    markers: false,
-                },
-            })
-            tl.fromTo(title, {opacity: 0}, {opacity: 1, ease: Power2.easeOut, duration: 1})
-        })
-    }, [])
-
-    // ----- Scroll to hash -----
-    useEffect(() => {
-        if (typeof window === 'undefined') return
-
-        const hash = window.location.hash.replace('#', '')
-
-        switch (hash) {
-            case 'home':
-                PresentationComponentRef.current?.scrollIntoView()
-                break
-            case 'about':
-                AboutComponentRef.current?.scrollIntoView()
-                break
-            case 'projects':
-                ProjectsComponentRef.current?.scrollIntoView()
-                break
-            case 'contact':
-                ContactMeComponentRef.current?.scrollIntoView()
-                break
-        }
-    }, [])
-
-
     return (
-        <div id="homepage" className="page">
-            {/* ----- PRESENTATION ----- */}
-            <PresentationComponent ref={PresentationComponentRef}/>
+        <>
+            <HomeClient/>
 
-            {/* ----- ABOUT ME ----- */}
-            <AboutComponent ref={AboutComponentRef}/>
-
-            {/* ----- MY PROJECTS ----- */}
-            <ProjectsComponent ref={ProjectsComponentRef}/>
-
-            {/* ----- CONTACT ME ----- */}
-            <ContactMeComponent ref={ContactMeComponentRef}/>
-        </div>
-    )
+            {/* JSON-LD */}
+            <Script
+                id="ld-homepage"
+                type="application/ld+json"
+                strategy="afterInteractive"
+                dangerouslySetInnerHTML={{
+                    __html: generateJsonLD("WebSite", {
+                        title: metadata.title as string,
+                        description: metadata.description as string,
+                        path: "/",
+                        image: "/images/logo.png",
+                    }),
+                }}
+            />
+        </>
+    );
 }

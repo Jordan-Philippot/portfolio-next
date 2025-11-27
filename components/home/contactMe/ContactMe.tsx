@@ -1,3 +1,5 @@
+'use client'
+
 import React, {useState, useEffect, useRef} from 'react'
 
 // ----- Packages -----
@@ -16,7 +18,7 @@ import Phone from "@/components/icons/Phone";
 import Send from "@/components/icons/Send";
 
 interface ContactMeProps {
-    ref: React.Ref<HTMLDivElement>,
+    ref: React.Ref<HTMLDivElement> | null,
 }
 
 export default function ContactMe({ref}: ContactMeProps) {

@@ -4,7 +4,7 @@ import {useEffect, useState, useRef} from 'react'
 import {usePathname} from 'next/navigation'
 
 // ----- Constants -----
-import {myProjects, Project} from '@/lib/constants/projects'
+import {myProjects, Project} from '@/lib/data/projects'
 import {animationDirection} from '@/lib/constants/animationDirection'
 
 // ----- Services -----

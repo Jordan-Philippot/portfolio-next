@@ -2,7 +2,7 @@ import React from 'react'
 
 
 // ----- Services -----
-import {myProjects} from '@/lib/constants/projects'
+import {myProjects} from '@/lib/data/projects'
 
 // ----- Packages -----
 import gsap, {Power2} from 'gsap'
@@ -45,7 +45,6 @@ export default function Projects({ref}: ProjectsProps) {
     return (
         <section
             id="projects"
-            className={`container-fluid`}
             ref={ref}
         >
             <div id="blob1"></div>

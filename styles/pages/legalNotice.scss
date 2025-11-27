@@ -1,0 +1,45 @@
+@use "../tools/variables" as *;
+
+#legal-notice-page {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 24px 24px 72px 24px;
+  min-height: 100vh;
+  max-width: 100vw;
+  text-align: left;
+
+  h1 {
+    font-size: 40px;
+  }
+
+  p {
+    font-size: 16px;
+    width: 100%;
+  }
+
+  a, strong {
+    color: $darkblue;
+  }
+
+  a {
+    font-weight: 600;
+  }
+
+  @include sm {
+    padding: 0 10vw 72px 10vw;
+  }
+  @include lg {
+    padding: 0 15vw 72px 10vw;
+    h1 {
+      font-size: 96px;
+    }
+    p {
+      font-size: 24px;
+    }
+  }
+  @include xl {
+    padding: 0 20vw 72px 20vw;
+  }
+}
