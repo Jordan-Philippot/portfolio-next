@@ -1,5 +1,6 @@
-import React from 'react'
+'use client'
 
+import React from 'react'
 
 // ----- Services -----
 import {myProjects} from '@/lib/data/projects'
