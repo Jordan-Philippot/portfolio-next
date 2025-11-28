@@ -1,8 +1,14 @@
+import React from "react";
+import ShoppingCart from "@/components/icons/ShoppingCart";
+import BlocksCms from "@/components/icons/BlocksCms";
+import Synergy from "@/components/icons/Synergy";
+import {IconProps} from "@/lib/constants/icon";
+
 export interface AboutProjectType {
     id: number;
     title: string;
     description: string;
-    logo: string;
+    icon: React.FC<IconProps>
 }
 
 export interface SkillType {
@@ -20,19 +26,20 @@ export const aboutProjects: AboutProjectType[] = [
         id: 1,
         title: "E-COMMERCE",
         description: "Refonte complète du front-end avec implémentation d’un rendu côté serveur (SSR) optimisé, pour un grand groupe du retail belge.",
-        logo: require("@/public/images/projects/netflix/logoNetflix.webp"),
+        icon: ShoppingCart
     },
     {
         id: 2,
         title: "CMS INTERNE",
         description: "Développement complet d'un cms avec bo modulaire, système de templating et bibliothèque de type google drive, pensé pour les équipes métier",
-        logo: require("@/public/images/projects/netflix/logoNetflix.webp"),
+        icon: BlocksCms
     },
     {
         id: 3,
         title: "PLATEFORME DE SYNERGIE",
         description: "Maintenance, refonte et évolution d’une plateforme permettant la synergie d'entreprises au sein d’un grand groupe du retail français",
-        logo: require("@/public/images/projects/netflix/logoNetflix.webp"),
+        icon: Synergy
+
     },
 ];
 

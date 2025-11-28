@@ -34,7 +34,7 @@ export default function Footer() {
             <div id="logo-animation" onClick={clickLogo} ref={footerLogo}>
                 <div>
                     <Image
-                        alt="Aliz Logo"
+                        alt="Logo de Jordan Philippot"
                         src={Logo}
                         width={150}
                         height={150}
@@ -57,7 +57,7 @@ export default function Footer() {
                     <li>
                         <Link href="/#home">
                             <Image
-                                alt="Aliz Logo"
+                                alt="Logo de Jordan Philippot"
                                 src={Logo}
                                 width={150}
                                 height={150}

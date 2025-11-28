@@ -3,7 +3,7 @@ interface ProjectImage {
     alt: string;
 }
 
-export interface Project {
+export interface ProjectType {
     id: number;
     slug: string;
     title: string;
@@ -21,7 +21,7 @@ export interface Project {
     images: ProjectImage[];
 }
 
-export const myProjects: Project[] = [
+export const myProjects: ProjectType[] = [
     {
         id: 1,
         slug: "netflux-comedy",

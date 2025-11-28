@@ -10,7 +10,7 @@
 }
 
 .btn-darkBlue {
-  background-color: $darkblue;
+  background-color: $cardblue;
 
   &:hover {
     background-color: $lightblue;
@@ -34,7 +34,7 @@ input {
 
   &:focus,
   &:active {
-    border: 1px solid $darkblue;
+    border: 1px solid $cardblue;
 
   }
 }

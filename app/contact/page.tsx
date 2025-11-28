@@ -1,9 +1,9 @@
 import ContactMeComponent from '@/components/home/contactMe/ContactMe'
-import {generateJsonLD, generateMetadata} from '@/lib/seo'
+import {CustomMetadata, generateJsonLD, generateMetadata} from '@/lib/seo'
 import Script from 'next/script'
 
 
-export const metadata = generateMetadata({
+export const metadata: CustomMetadata = generateMetadata({
     title: "Contact – Jordan Philippot | Développeur Full-Stack JavaScript & PHP",
     description: "Contactez moi pour vos projets web en JavaScript, Node.js ou PHP Symfony. Développeur Full-Stack avec 5 ans d'expérience.",
     path: "/contact",

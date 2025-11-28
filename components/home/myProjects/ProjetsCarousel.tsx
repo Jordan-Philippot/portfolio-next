@@ -3,17 +3,17 @@ import {useEffect, useRef, useState} from "react";
 import gsap from "gsap";
 import Draggable from "gsap/Draggable";
 
-import type {Project} from "@/lib/data/projects";
+import type {ProjectType} from "@/lib/data/projects";
 import Link from "next/link";
 import ArrowRight from "@/components/icons/ArrowRight";
 
 gsap.registerPlugin(Draggable);
 
 interface CarouselProps {
-    slides: Project[];
+    slides: ProjectType[];
 }
 
-export default function GsapCarousel({slides}: CarouselProps) {
+export default function ProjectCarousel({slides}: CarouselProps) {
     const cardsRef = useRef<HTMLDivElement[]>([]);
     const dragInstance = useRef<Draggable[]>(null);
     const proxyRef = useRef<HTMLDivElement>(null);
@@ -94,18 +94,15 @@ export default function GsapCarousel({slides}: CarouselProps) {
                          cardsRef.current[i] = el;
                      }}
                 >
+                    <div className={"card-wrapper-title"}><h3>{slide.title}</h3></div>
                     <div
                         className="card"
                         style={{backgroundImage: `url(${slide.background})`}}
                     >
                         <div className="overlay"/>
                         <div className="meta">
-                            <h3>{slide.title}</h3>
-
                             <p>{slide.shortDescription}</p>
-                            <Link href={'/projets/' + slide.slug}><ArrowRight/></Link>
-                            {/* <p>{slide.tools}</p>*/}
-
+                            <Link href={'/projets/' + slide.slug}>Voir&nbsp;plus<ArrowRight/></Link>
                         </div>
                     </div>
 

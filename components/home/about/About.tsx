@@ -26,12 +26,12 @@ export default function About({ref}: AboutProps) {
                     opacity: 1,
                     y: 0,
                     x: 0,
-                    ease: Power2.easeOut,
+                    ease: Power2.easeInOut,
                     duration: 0.8,
                     stagger: 0.2,
                     scrollTrigger: {
                         trigger: smokyDescriptionRef.current,
-                        start: "top 90%",
+                        start: "top 70%",
                         end: "bottom 20%",
                         toggleActions: "play none none reverse",
                     }
@@ -66,6 +66,7 @@ export default function About({ref}: AboutProps) {
                 <div id="about-cards" ref={smokyDescriptionRef}>
                     {aboutProjects.map((project, index) => (
                         <div className="card" key={index}>
+                            <project.icon width={32} height={32}/>
                             <h3> {project?.title}</h3>
                             <p>{project?.description}</p>
                         </div>

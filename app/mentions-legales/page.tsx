@@ -1,7 +1,7 @@
 import Script from 'next/script'
-import {generateJsonLD, generateMetadata} from '@/lib/seo'
+import {CustomMetadata, generateJsonLD, generateMetadata} from '@/lib/seo'
 
-export const metadata = generateMetadata({
+export const metadata: CustomMetadata = generateMetadata({
     title: "Mentions Légales – Jordan Philippot",
     description: "Mentions légales du site jordan-philippot.fr, développé par Jordan Philippot, développeur Full-Stack JavaScript & PHP.",
     path: "/mentions-legales",

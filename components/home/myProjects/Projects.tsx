@@ -6,10 +6,10 @@ import {myProjects} from '@/lib/data/projects'
 
 // ----- Packages -----
 import gsap, {Power2} from 'gsap'
-import GsapCarousel from "@/components/home/myProjects/ProjetsCarousel";
+import ProjectCarousel from "@/components/home/myProjects/ProjetsCarousel";
 
 interface ProjectsProps {
-    ref: React.Ref<HTMLDivElement> | undefined,
+    ref: React.Ref<HTMLDivElement> | null
 }
 
 export default function Projects({ref}: ProjectsProps) {
@@ -52,7 +52,7 @@ export default function Projects({ref}: ProjectsProps) {
 
             <h2>Mes Projets</h2>
 
-            <GsapCarousel slides={myProjects}/>
+            <ProjectCarousel slides={myProjects}/>
         </section>
     )
 }

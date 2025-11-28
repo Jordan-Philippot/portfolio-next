@@ -51,7 +51,7 @@
     position: absolute;
     overflow: hidden !important;
     z-index: 1;
-    background: $darkblue;
+    background: $cardblue;
     top: 70vh;
     right: -30%;
     width: 100vw;
@@ -97,8 +97,7 @@
           -webkit-clip-path: var(--clip-start);
           clip-path: var(--clip-start);
           transition: -webkit-clip-path 0.5s;
-          transition: clip-path 1s;
-          transition: clip-path 1s, -webkit-clip-path 0.5s, transform 1s ease-in-out 1;
+          transition: clip-path 1s, -webkit-clip-path 0.5s, transform 1s ease-in-out;
         }
       }
     }

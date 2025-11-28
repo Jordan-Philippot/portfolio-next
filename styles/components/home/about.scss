@@ -28,7 +28,7 @@
       padding: 0 10%;
 
       b {
-        color: $darkblue;
+        color: $cardblue;
       }
     }
 
@@ -54,6 +54,7 @@
         padding: 8px 16px 16px 16px;
         text-align: center;
         background-color: #101010;
+        box-shadow: 0 0 8px 1px $cardblue;
         @include md {
           width: 300px;
         }
@@ -62,10 +63,14 @@
           padding: 16px 32px 32px 32px;
         }
 
+        svg {
+          margin: 0 auto;
+        }
+
         h3 {
           font-size: 16px;
           font-weight: 900;
-          text-shadow: 0 1px 4px $darkblue;
+          text-shadow: 0 1px 4px $cardblue;
 
         }
 
@@ -121,7 +126,7 @@
 
           &:hover {
             transform: scale(1.2);
-            text-shadow: 0 1px 16px $darkblue;
+            text-shadow: 0 1px 16px $cardblue;
           }
         }
       }

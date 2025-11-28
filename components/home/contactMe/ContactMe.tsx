@@ -76,8 +76,8 @@ export default function ContactMe({ref}: ContactMeProps) {
                 {display: 'none', top: '50%', left: '50%', scale: 0.3},
                 {display: 'flex', top: '35%', left: '58%', scale: 1, duration: 2, delay: 1.5, ease: Power4.easeOut}
             )
-            gsap.to('#firstContact', {left: '34%', duration: 2, delay: 2, ease: Power4.easeOut})
-            gsap.to('#thirdContact', {left: '66%', duration: 2, delay: 2, ease: Power4.easeOut})
+            gsap.to('#firstContact', {left: '30%', duration: 2, delay: 2, ease: Power4.easeOut})
+            gsap.to('#thirdContact', {left: '70%', duration: 2, delay: 2, ease: Power4.easeOut})
         } else {
             gsap.fromTo(
                 '#firstContact',

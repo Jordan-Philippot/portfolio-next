@@ -1,5 +1,5 @@
 import {myProjects} from "@/lib/data/projects";
-import type {Project} from "@/lib/data/projects";
+import type {ProjectType} from "@/lib/data/projects";
 
 const BASE_URL: string = process.env.NEXT_PUBLIC_BASE_URL || "http://localhost:3000/";
 
@@ -8,7 +8,7 @@ interface Page {
     priority: number;
 }
 
-// Pages statiques
+// Static pages
 const PAGES: Page[] = [
     {path: "", priority: 1.0},
     {path: "projets", priority: 0.9},
@@ -28,7 +28,7 @@ export async function GET(): Promise<Response> {
 
 
     const projectUrls = myProjects.map(
-        (project: Project) => `
+        (project: ProjectType) => `
     <url>
       <loc>${BASE_URL}projets/${project.slug}</loc>
       <priority>0.9</priority>
@@ -36,7 +36,7 @@ export async function GET(): Promise<Response> {
     ).join("");
 
     const xml: string = `<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="https://www.sitemaps.org/schemas/sitemap/0.9">
   ${staticUrls}
   ${projectUrls}
 </urlset>`;

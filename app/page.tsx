@@ -1,12 +1,12 @@
 import HomeClient from "@/app/homeClient";
-import {generateJsonLD, generateMetadata} from "@/lib/seo";
+import {CustomMetadata, generateJsonLD, generateMetadata} from "@/lib/seo";
 import Script from "next/script";
 
 
-export const metadata = generateMetadata({
-    title: "Jordan Philippot – Développeur fullstack JavaScript & PHP | 5 ans d'expérience",
+export const metadata: CustomMetadata = generateMetadata({
+    title: "Jordan Philippot – Développeur fullstack JavaScript & PHP, 5 ans d'expérience",
     description:
-        "Développeur Full-Stack spécialisé en JavaScript (React, Node.js) et PHP (Symfony) avec 5 ans d’expérience. Création d’applications web performantes, modernes et scalables.",
+        "Développeur Full-Stack spécialisé en JavaScript (React, Node.js) et PHP (Symfony) avec 5 ans d’expérience, sur la métropole lilloise. Création d’applications web performantes, modernes et scalables.",
     path: "/",
     keywords: [
         "développeur fullstack",
@@ -16,6 +16,7 @@ export const metadata = generateMetadata({
         "node js",
         "express",
         "symfony",
+        "lille"
     ],
 });
 
