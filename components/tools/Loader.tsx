@@ -59,7 +59,10 @@ export default function Loader() {
             <Image
                 src={EllipseLogo}
                 alt="logo Jordan Philipot développeur web fullstrack react symfony"
-                id="loader-logo" width={80} height={80}
+                id="loader-logo"
+                width={80}
+                height={80}
+                loading="eager"
             />
 
             <div id="flash"></div>
