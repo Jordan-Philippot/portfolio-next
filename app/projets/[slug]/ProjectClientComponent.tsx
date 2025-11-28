@@ -10,7 +10,7 @@ import {animationDirection} from '@/lib/constants/animationDirection'
 import {revealText} from '@/lib/helpers/revealText'
 import Image from "next/image"
 
-export default function ProjectClientComponent({slug}: { slug: string }) {
+export default function ProjectClientComponent({slug}: { slug: string | undefined }) {
 
     const [myProject, setMyProject] = useState<ProjectType | null>(null)
     const [haveProject, setHaveProject] = useState(false)

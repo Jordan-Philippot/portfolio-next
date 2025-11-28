@@ -1,22 +1,22 @@
+'use server'
 import {Metadata} from "next";
 import {generateMetadata as buildMeta, generateJsonLD} from "@/lib/seo";
 import {myProjects} from "@/lib/data/projects";
 import Script from "next/script";
 import ProjectClientComponent from "@/app/projets/[slug]/ProjectClientComponent";
+import {notFound} from "next/navigation";
 
 interface Props {
-    params: { slug: string }
+    params: any
 }
 
-export async function generateMetadata({params}: Props): Promise<Metadata> {
-    const project = myProjects.find(p => p.slug === params.slug);
+export async function generateMetadata({params}: Props): Promise<Metadata | null> {
+    const {slug} = await params;
+
+    const project = myProjects.find(p => p.slug === slug);
 
     if (!project) {
-        return buildMeta({
-            title: "Projet introuvable",
-            description: "Ce projet n’existe pas ou n’a pas été trouvé.",
-            path: `/my-project/${params.slug}`,
-        });
+        return null
     }
 
     return buildMeta({
@@ -35,12 +35,19 @@ export async function generateMetadata({params}: Props): Promise<Metadata> {
     });
 }
 
-export default function Page({params}: Props) {
-    const project = myProjects.find(p => p.slug === params.slug);
+export default async function Page({params}: Props) {
+    const param = await params;
 
+
+    const project = myProjects.find(p => p.slug === param?.slug);
+
+    if (!project) {
+        return notFound()
+    }
+    
     return (
         <>
-            <ProjectClientComponent slug={params.slug}/>
+            <ProjectClientComponent slug={param?.slug}/>
 
             {project && (
                 <Script
