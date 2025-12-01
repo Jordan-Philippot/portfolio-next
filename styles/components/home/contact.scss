@@ -3,8 +3,14 @@
 #contact {
   position: relative;
 
+  @include lg {
+    min-height: 130vh;
+  }
+
+
   h2 {
     text-align: left;
+
   }
 
   .contact-flex {
@@ -81,6 +87,7 @@
     height: 360px;
   }
 
+  // First render with animation
   #clickMe {
     position: absolute;
     top: 50%;
@@ -129,7 +136,7 @@
 
   #spiral {
     position: absolute;
-    top: calc(50% - 65vw);
+    top: calc(50% - 70vw);
     left: -10vw;
     width: 120vw;
     height: 120vw;
@@ -154,7 +161,7 @@
     left: calc(50% - 80px);
     width: 160px;
     height: 160px;
-    background-color: $cardblue;
+    background-color: $darkblue;
     border-radius: 50%;
     filter: blur(15px);
 
@@ -164,7 +171,7 @@
       content: "";
       width: 40px;
       height: 40px;
-      background: $cardblue;
+      background: $darkblue;
       border-radius: 50%;
       transform-origin: 50px 50px;
       transform: rotate(50deg);
@@ -178,7 +185,7 @@
       content: "";
       width: 80px;
       height: 80px;
-      background: $cardblue;
+      background: $darkblue;
       border-radius: 50%;
       transform-origin: 60px 60px;
       transform: rotate(300deg);

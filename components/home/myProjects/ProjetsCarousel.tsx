@@ -6,6 +6,9 @@ import Draggable from "gsap/Draggable";
 import type {ProjectType} from "@/lib/data/projects";
 import Link from "next/link";
 import ArrowRight from "@/components/icons/ArrowRight";
+import {useMediaQuery} from "@/hooks/useMediaQuery";
+import ChevronLeft from "@/components/icons/ChevronLeft";
+import ChevronRight from "@/components/icons/ChevronRight";
 
 gsap.registerPlugin(Draggable);
 
@@ -21,11 +24,17 @@ export default function ProjectCarousel({slides}: CarouselProps) {
     const [index, setIndex] = useState(2);
     const count = slides.length;
 
+    const isTablet = useMediaQuery("(max-width: 1199.98px)");
+
+
     const goTo = (newIndex: number) => {
         const idx = (newIndex + count) % count;
         setIndex(idx);
         layout(idx);
     };
+
+    const next = () => goTo(index + 1);
+    const prev = () => goTo(index - 1);
 
     const layout = (center: number) => {
         cardsRef.current.forEach((card, i) => {
@@ -60,6 +69,12 @@ export default function ProjectCarousel({slides}: CarouselProps) {
     useEffect(() => {
         layout(index);
 
+        if (isTablet) {
+            dragInstance.current?.forEach(d => d.kill());
+            dragInstance.current = null;
+            return;
+        }
+
         if (!proxyRef.current) {
             proxyRef.current = document.createElement("div");
         }
@@ -83,7 +98,7 @@ export default function ProjectCarousel({slides}: CarouselProps) {
         return () => {
             dragInstance.current?.forEach((d: any) => d.kill());
         };
-    }, [index]);
+    }, [index, isTablet]);
 
     return (
         <div className="carousel">
@@ -112,6 +127,13 @@ export default function ProjectCarousel({slides}: CarouselProps) {
                     />
                 </div>
             ))}
+
+            {isTablet && (
+                <div className="carousel-mobile-nav">
+                    <button onClick={prev} className="nav-button"><ChevronLeft/></button>
+                    <button onClick={next} className="nav-button"><ChevronRight/></button>
+                </div>
+            )}
         </div>
     );
 }

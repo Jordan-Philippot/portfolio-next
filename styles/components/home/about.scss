@@ -28,7 +28,7 @@
       padding: 0 10%;
 
       b {
-        color: $cardblue;
+        color: $darkblue;
       }
     }
 
@@ -49,12 +49,12 @@
         flex-direction: column;
         justify-content: start;
         max-width: 80%;
-        border: 1px solid $cardblue;
+        border: 1px solid $darkblue;
         border-radius: 16px;
         padding: 8px 16px 16px 16px;
         text-align: center;
         background-color: #101010;
-        box-shadow: 0 0 8px 1px $cardblue;
+        box-shadow: 0 0 8px 1px $darkblue;
         @include md {
           width: 300px;
         }
@@ -70,7 +70,7 @@
         h3 {
           font-size: 16px;
           font-weight: 900;
-          text-shadow: 0 1px 4px $cardblue;
+          text-shadow: 0 1px 4px $darkblue;
 
         }
 
@@ -90,6 +90,7 @@
       display: flex;
       flex-direction: column;
       gap: 48px;
+      overflow-x: hidden;
 
       .infinite-title {
         text-align: left;
@@ -126,7 +127,7 @@
 
           &:hover {
             transform: scale(1.2);
-            text-shadow: 0 1px 16px $cardblue;
+            text-shadow: 0 1px 16px $darkblue;
           }
         }
       }

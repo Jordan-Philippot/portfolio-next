@@ -13,7 +13,7 @@
     position: relative;
     margin: 120px auto 50px auto;
     z-index: 3;
-    background: $cardblue;
+    background: $darkblue;
     width: 250px;
     height: 250px;
     border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%;
@@ -67,7 +67,7 @@
       }
 
       b {
-        color: $cardblue;
+        color: $darkblue;
       }
     }
 
@@ -83,16 +83,16 @@
         flex-direction: column;
 
         svg {
-          border: 1px solid $cardblue;
+          border: 1px solid $darkblue;
           padding: 10px;
           width: 32px;
           height: 32px;
           border-radius: 6px;
-          fill: $cardblue;
+          fill: $darkblue;
 
           &:hover {
-            background-color: $cardblue;
-            box-shadow: 0 0 32px 1px $cardblue;
+            background-color: $darkblue;
+            box-shadow: 0 0 32px 1px $darkblue;
             fill: white;
           }
         }

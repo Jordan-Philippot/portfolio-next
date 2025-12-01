@@ -31,7 +31,7 @@ export const aboutProjects: AboutProjectType[] = [
     {
         id: 2,
         title: "CMS INTERNE",
-        description: "Développement complet d'un cms avec bo modulaire, système de templating et bibliothèque de type google drive, pensé pour les équipes métier",
+        description: "Développement complet d'un cms avec BO modulaire, système de templating et bibliothèque de type google drive, pensé pour les équipes métier",
         icon: BlocksCms
     },
     {

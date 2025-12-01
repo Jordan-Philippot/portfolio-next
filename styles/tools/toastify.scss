@@ -1,0 +1,25 @@
+@use "variables" as *;
+
+.Toastify {
+  &__toast {
+    font-family: $font-family-poppins;
+    font-size: 14px;
+    line-height: 16px;
+    border-radius: 10px !important;
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.2) !important;
+
+    &--success {
+      background: $darkblue !important;
+      color: $white !important;
+
+      svg {
+        fill: white;
+
+      }
+    }
+  }
+
+  &__progress-bar--success {
+    background: $darkblue !important;
+  }
+}

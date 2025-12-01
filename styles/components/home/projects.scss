@@ -6,7 +6,10 @@
   position: relative;
   font-size: 120px;
   overflow-x: hidden;
-  padding-bottom: 70px;
+
+  @include lg {
+    padding-bottom: 70px;
+  }
 
   #blob1 {
     position: absolute;
@@ -45,9 +48,14 @@
 
   h2 {
     padding-top: 50px;
-    margin-bottom: 50px;
+    margin-bottom: 70px;
     text-align: right;
     margin-right: 16px;
+
+    @include lg {
+      margin-bottom: 50px;
+    }
+
   }
 }
 

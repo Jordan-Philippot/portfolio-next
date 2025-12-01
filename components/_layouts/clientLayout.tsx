@@ -5,6 +5,7 @@ import Footer from "@/components/_layouts/Footer";
 import Waves from "@/components/tools/Waves";
 import Loader from "@/components/tools/Loader";
 import Cursor from "@/components/tools/Cursor";
+import {ToastContainer} from "react-toastify";
 
 interface ClientLayoutProps {
     children: ReactNode;
@@ -34,6 +35,18 @@ export default function ClientLayout({children}: ClientLayoutProps) {
                     <Waves wavesRef={wavesRef}/>
                     <Footer/>
                 </div>}
+
+            <ToastContainer
+                position="top-center"
+                autoClose={false}
+                hideProgressBar={false}
+                newestOnTop={false}
+                closeOnClick
+                pauseOnFocusLoss
+                draggable
+                pauseOnHover
+                theme="dark"
+            />
         </>
     )
 }

@@ -43,7 +43,7 @@ $screen-xxl-min: 1500px;
 
 // Smartphone
 @mixin sm {
-  @media (min-width: #{$screen-sm-min}) and (min-height: #{$screen-sm-min}) {
+  @media (min-width: #{$screen-sm-min}) {
     @content;
   }
 }

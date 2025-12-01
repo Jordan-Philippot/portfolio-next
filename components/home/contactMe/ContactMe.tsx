@@ -10,12 +10,12 @@ import emailjs, {init} from '@emailjs/browser'
 import Spiral from '@/public/images/spiral.svg'
 
 // ----- Component -----
-import ModalContact from './ModalContact'
 import Image from "next/image";
 import Github from "@/components/icons/Github";
 import LinkedIn from "@/components/icons/LinkedIn";
 import Phone from "@/components/icons/Phone";
 import Send from "@/components/icons/Send";
+import {toast} from "react-toastify";
 
 interface ContactMeProps {
     ref: React.Ref<HTMLDivElement> | null,
@@ -24,7 +24,6 @@ interface ContactMeProps {
 export default function ContactMe({ref}: ContactMeProps) {
     init(process.env.NEXT_PUBLIC_EMAILJS_PK as string)
 
-    const [openModal, setOpenModal] = useState<boolean>(false)
     const clickMeRef = useRef<HTMLDivElement>(null)
     const [phone, setPhone] = useState<string>('')
     const [email, setEmail] = useState<string>('')
@@ -94,28 +93,14 @@ export default function ContactMe({ref}: ContactMeProps) {
     }
 
     const contactSubmit = () => {
-        emailjs
-            .send(
-                process.env.NEXT_PUBLIC_EMAILJS_SERVICE_GMAIL!,
-                process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_CONTACT!,
-                data
-            )
-            .then(
-                (response) => {
-                    console.log('SUCCESS!', response.status, response.text)
-                    setOpenModal(true)
-                },
-                (error) => {
-                    console.log('FAILED...', error)
-                }
-            )
+        emailjs.send(process.env.NEXT_PUBLIC_EMAILJS_SERVICE_GMAIL as string, process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_CONTACT as string, data)
+        toast.success(" Merci de votre confiance, je vous recontacterai dans les plus brefs délais afin d'échanger sur vos besoins.")
     }
 
     return (
         <section id="contact" className={`page`} ref={ref}>
             <div id="blob-white-animated"></div>
 
-            {openModal && <ModalContact setOpenModal={setOpenModal}/>}
 
             <h2>Contact</h2>
             <Image src={Spiral} alt="spiral" id="spiral" width={500} height={500}/>

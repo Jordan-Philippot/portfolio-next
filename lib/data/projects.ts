@@ -33,7 +33,7 @@ export const myProjects: ProjectType[] = [
             "Netlux-comedy s'inspire des interface de Netflix et Youtube, et propose un large choix de vidéos de stand-up",
         job: "Maquettage • Intégration • front-end • back-end",
         tools: "React • Typescript • React-query • Symfony • Sass",
-        other: "Tâches cron | Listener | Webhook | Bucket AWS",
+        other: "Tâches cron • Listener • Webhook • Bucket AWS",
         logo: require("@/public/images/projects/netflix/logoNetflix.webp"),
         link: false,
         github: "https://github.com/Jordan-Philippot/Netflix-comedy",
@@ -76,7 +76,7 @@ export const myProjects: ProjectType[] = [
         longDescription:
             "Aliz est une start-up fondée en 2020, spécialisé dans l'automatisation de tâches pour TPE/PME et travailleurs indépendants. " +
             "(gestion administrative de patientèle, prise de rendez-vous, déclaration de TVA...)",
-        job: "Intégration | front-end | back-end | maintenance",
+        job: "Intégration • front-end • back-end • maintenance",
         tools: "React • Symfony • Stripe • Gsap • Sass",
         other:
             "Tâches cron • Listener • Webhook • Connexion Gmail & Outlook • Google Analitycs • OVH • FileZilla",
@@ -117,15 +117,15 @@ export const myProjects: ProjectType[] = [
         slug: "aliz-calendar",
         title: "alizCalendar",
         titleHover: "Produit Aliz",
-        shortDescription: "Outils de gestion et prise de rendez-vous en ligne",
+        shortDescription: "Outils de gestion et de prise de rendez-vous en ligne",
         longDescription:
             "AlizCalendar est un produit Aliz permettant de gérer la prise de rendez-vous en ligne de manière personnalisé. " +
             "Les utilisateurs peuvent proposer des sondage en équipe, des webinars ou encore des rendez-vous récurrents",
         job: "Maquettage • Intégration • front-end • back-end ",
         tools: "Symfony • Twig • Figma",
-        other: "Tâches cron | Listener | Webhook ",
+        other: "Tâches cron • Listener • Webhook ",
         logo: require("@/public/images/projects/aliz/logoAliz.webp"),
-        link: "https://calendar.aliz.io",
+        link: false,
         github: false,
         isMediaDesktop: true,
         background: "/images/projects/alizCalendar/meetingAlizCalendar.webp",
@@ -162,7 +162,7 @@ export const myProjects: ProjectType[] = [
         title: "alizVerif",
         titleHover: "Produit Aliz",
         shortDescription:
-            "Outils de recherche, vérification et nettoyage de données d'entreprises",
+            "Outils de recherche, de vérification et de nettoyage de données d'entreprises",
         longDescription:
             "AlizVerif est un outil de recherche, vérification et nettoyage de données d'entreprises. " +
             "En quelques clics, vos données peuvent être vérifiées, notées et/ou nettoyées en les comparant à plusieurs bases de données fiables (API SIREN, BODACC etc...)",
@@ -170,7 +170,7 @@ export const myProjects: ProjectType[] = [
         tools: "React • Gsap • Figma",
         other: "Webhook • Axios",
         logo: require("@/public/images/projects/aliz/logoAliz.webp"),
-        link: "https://verif-data.aliz.io",
+        link: false,
         github: false,
         isMediaDesktop: true,
         background: "/images/projects/alizVerif/alizVerif.webp",
@@ -217,11 +217,10 @@ export const myProjects: ProjectType[] = [
         tools: "React • Gsap • Figma • socket.io",
         other: "Google Maps • filtre de recherche avancés • api.gouv • Axios",
         logo: require("@/public/images/projects/studhelp/logoStudhelp.webp"),
-        link: "https://studhelp-front.herokuapp.com/",
+        link: false,
         github: "https://github.com/Jordan-Philippot/studhelp_front",
         isMediaDesktop: true,
         background: "/images/projects/studhelp/studhelp.webp",
-
         images: [
             {
                 src: require("@/public/images/projects/studhelp/studhelp.webp"),
@@ -294,13 +293,12 @@ export const myProjects: ProjectType[] = [
             "automatiser des processus métiers et/ou automatiser la réalisation du reporting et générer des dashboards plus efficaces.",
         job: "Intégration • front-end",
         tools: "React • Gsap",
-        other: "Nouveau site en cours de développement...",
+        other: "Site vitrine de TED, une société de Consulting spécialisée exclusivement dans les projets de RPA (Robotic Process Automation).",
         logo: require("@/public/images/projects/ted/logo.webp"),
-        link: false,
+        link: "https://ted.consulting",
         github: false,
         isMediaDesktop: true,
         background: "/images/projects/ted/homeTed.webp",
-
         images: [
             {
                 src: require("@/public/images/projects/ted/homeTed.webp"),
