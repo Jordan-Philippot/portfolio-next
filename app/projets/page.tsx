@@ -7,17 +7,19 @@ import {myProjects} from "@/lib/data/projects";
 export const metadata: CustomMetadata = generateMetadata({
     title: "Mes projets – Jordan Philippot",
     description:
-        "Découvrez une sélection de projets réalisés : e-commerce, CMS interne, plateformes professionnelles et outils sur mesure.",
+        "Découvrez une sélection de projets réalisés : e-commerce, CMS interne, Saas, plateformes professionnelles et outils sur mesure.",
     path: "/projects",
     keywords: [
         "projets web",
-        "développement",
-        "portfolio",
+        "développement web",
         "javascript",
         "react",
+        'next',
         "node",
         "symfony",
-        "fullstack",
+        "développeur fullstack",
+        "métropole lilloise",
+        "lille"
     ],
 });
 

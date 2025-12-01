@@ -4,16 +4,20 @@ import Script from 'next/script'
 
 
 export const metadata: CustomMetadata = generateMetadata({
-    title: "Contact – Jordan Philippot | Développeur Full-Stack JavaScript & PHP",
-    description: "Contactez moi pour vos projets web en JavaScript, Node.js ou PHP Symfony. Développeur Full-Stack avec 5 ans d'expérience.",
+    title: "Contact – Jordan Philippot, Développeur Full-Stack JavaScript",
+    description: "Contactez moi pour vos projets web en JavaScript (React, Next.js, Node.js). Développeur Full-Stack avec 5 ans d'expérience.",
     path: "/contact",
     keywords: [
         "contact développeur fullstack",
         "javascript",
         "php",
         "react",
-        "node js",
+        "node",
         "symfony",
+        "nextJs",
+        "next",
+        "node",
+        "lille"
     ],
 })
 

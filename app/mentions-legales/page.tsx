@@ -2,10 +2,22 @@ import Script from 'next/script'
 import {CustomMetadata, generateJsonLD, generateMetadata} from '@/lib/seo'
 
 export const metadata: CustomMetadata = generateMetadata({
-    title: "Mentions Légales – Jordan Philippot",
-    description: "Mentions légales du site jordan-philippot.fr, développé par Jordan Philippot, développeur Full-Stack JavaScript & PHP.",
+    title: "Mentions Légales – Jordan Philippot, Développeur fullstack",
+    description: "Mentions légales du site jordan-philippot.fr, développeur Full-Stack JavaScript (React, Next.js, Node.js).",
     path: "/mentions-legales",
-    keywords: ["mentions légales", "contact", "développeur fullstack", "javascript", "php"],
+    keywords: [
+        "mentions légales",
+        "développeur fullstack",
+        "javascript",
+        "php",
+        "react",
+        "node",
+        "express",
+        "symfony",
+        "lille",
+        "next",
+        "métropole lilloise"
+    ],
 })
 
 export default function LegalNotice() {

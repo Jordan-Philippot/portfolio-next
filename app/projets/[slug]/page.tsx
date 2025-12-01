@@ -24,14 +24,14 @@ export async function generateMetadata({params}: Props): Promise<Metadata | null
         description: project.longDescription.slice(0, 155),
         path: `/my-project/${project.slug}`,
         keywords: [
-            "développeur",
+            "développeur fullstack",
             "javascript",
-            "fullstack",
+            "métropole lilloise",
             project.title,
             project.tools,
             project.job,
         ],
-        image: project.images?.[0]?.src || "/images/logo.webp",
+        image: "/images/image_profile.webp",
     });
 }
 
@@ -44,7 +44,7 @@ export default async function Page({params}: Props) {
     if (!project) {
         return notFound()
     }
-    
+
     return (
         <>
             <ProjectClientComponent slug={param?.slug}/>

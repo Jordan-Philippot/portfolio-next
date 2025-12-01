@@ -4,19 +4,21 @@ import Script from "next/script";
 
 
 export const metadata: CustomMetadata = generateMetadata({
-    title: "Jordan Philippot – Développeur fullstack JavaScript & PHP, 5 ans d'expérience",
+    title: "Jordan Philippot – Développeur Full-Stack JavaScript",
     description:
-        "Développeur Full-Stack spécialisé en JavaScript (React, Node.js) et PHP (Symfony) avec 5 ans d’expérience, sur la métropole lilloise. Création d’applications web performantes, modernes et scalables.",
+        "Développeur Full-Stack spécialisé en JavaScript (React, Next.js, Node.js) et PHP (Symfony) avec 5 ans d’expérience, sur la métropole lilloise. Création d’applications web performantes, modernes et scalables.",
     path: "/",
     keywords: [
         "développeur fullstack",
         "javascript",
         "php",
         "react",
-        "node js",
+        "node",
         "express",
         "symfony",
-        "lille"
+        "lille",
+        "next",
+        "métropole lilloise"
     ],
 });
 
