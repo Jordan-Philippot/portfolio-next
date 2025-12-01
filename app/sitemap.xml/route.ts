@@ -21,7 +21,7 @@ export async function GET(): Promise<Response> {
     const staticUrls = PAGES.map(
         (page) => `
     <url>
-      <loc>${BASE_URL}${page.path}</loc>
+      <loc>${BASE_URL}/${page.path}</loc>
       <priority>${page.priority}</priority>
     </url>`
     ).join("");
@@ -30,7 +30,7 @@ export async function GET(): Promise<Response> {
     const projectUrls = myProjects.map(
         (project: ProjectType) => `
     <url>
-      <loc>${BASE_URL}projets/${project.slug}</loc>
+      <loc>${BASE_URL}/projets/${project.slug}</loc>
       <priority>0.9</priority>
     </url>`
     ).join("");
