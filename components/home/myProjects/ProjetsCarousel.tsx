@@ -21,7 +21,7 @@ export default function ProjectCarousel({slides}: CarouselProps) {
     const dragInstance = useRef<Draggable[]>(null);
     const proxyRef = useRef<HTMLDivElement>(null);
 
-    const [index, setIndex] = useState(2);
+    const [index, setIndex] = useState(0);
     const count = slides.length;
 
     const isTablet = useMediaQuery("(max-width: 1199.98px)");

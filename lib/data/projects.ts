@@ -286,7 +286,7 @@ export const myProjects: ProjectType[] = [
         slug: "ted",
         title: "ted",
         titleHover: "Start up française pure player DataViz et RPA",
-        shortDescription: "Site vitrine, en cours de développement",
+        shortDescription: "Site vitrine pour une société de Consulting IT en Data Strategy spécialisée dans les projets de RPA (Robotic Process Automation)",
         longDescription:
             "TED est une société de Consulting IT en Data Strategy spécialisée dans les projets de RPA (Robotic Process Automation), " +
             "ainsi que des projets de Data Visualisation (DataViz). Leurs clients, principalement issues du CAC40, les sollicites pour " +
@@ -329,7 +329,7 @@ export const myProjects: ProjectType[] = [
     {
         id: 8,
         slug: "les-chemins-de-la-maison",
-        title: "Éducatrice Spé",
+        title: "Les Chemins De La Maison",
         titleHover: "Les Chemins De La Maison",
         shortDescription: "Site vitrine mettant en lumière les services d'une auto-entrepreneuse, éducatrice spécialisée et sexothérapeute.",
         longDescription: "Création complète d’un site vitrine pour mettre en lumière une auto-entrepreneuse, éducatrice spécialisée et sexothérapeute. Le site présente ses services d’accompagnement pour les enfants TDI/TND, une guidance parentale, ainsi que son expertise en thérapie individuelle et de couple. Je me suis occupé de l’intégralité du projet : design, développement front-end et SEO technique (optimisation des performances, structure sémantique, rédaction des métadonnées, stratégie de mots-clés).",
@@ -373,7 +373,7 @@ export const myProjects: ProjectType[] = [
         slug: "amae-production",
         title: "Amae Production",
         titleHover: "Amae Production",
-        shortDescription: "Site vitrine mettant en lumière une association spécialisée dans la production audiovisuelle et la création de contenus (festivals, clips, témoignages, portraits...)",
+        shortDescription: "Site vitrine mettant en lumière une association spécialisée dans la production audiovisuelle (festivals, clips, témoignages, portraits...)",
         longDescription: "Site vitrine mettant en lumière une association qui couvre d’importants festivals, réalise clips, contenus artistiques et projets interactifs pour des événements majeurs, en france métropolitaine et à la Réunion",
         job: "Design • Intégration • front-end",
         tools: "Next.js • SCSS • Figma • GSAP",
