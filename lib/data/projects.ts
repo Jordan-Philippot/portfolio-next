@@ -31,8 +31,8 @@ export const myProjects: ProjectType[] = [
             "Application React proposant une large gamme de vidéos de stand-up",
         longDescription:
             "Netlux-comedy s'inspire des interface de Netflix et Youtube, et propose un large choix de vidéos de stand-up",
-        job: "Maquettage • Intégration • front-end • back-end",
-        tools: "React • Typescript • React-query • Symfony • Sass",
+        job: "Design • Intégration • front-end • back-end",
+        tools: "React • Typescript • React-query • Symfony • SCSS",
         other: "Tâches cron • Listener • Webhook • Bucket AWS",
         logo: require("@/public/images/projects/netflix/logoNetflix.webp"),
         link: false,
@@ -77,7 +77,7 @@ export const myProjects: ProjectType[] = [
             "Aliz est une start-up fondée en 2020, spécialisé dans l'automatisation de tâches pour TPE/PME et travailleurs indépendants. " +
             "(gestion administrative de patientèle, prise de rendez-vous, déclaration de TVA...)",
         job: "Intégration • front-end • back-end • maintenance",
-        tools: "React • Symfony • Stripe • Gsap • Sass",
+        tools: "React • Symfony • Stripe • Gsap • SCSS",
         other:
             "Tâches cron • Listener • Webhook • Connexion Gmail & Outlook • Google Analitycs • OVH • FileZilla",
         logo: require("@/public/images/projects/aliz/logoAliz.webp"),
@@ -121,7 +121,7 @@ export const myProjects: ProjectType[] = [
         longDescription:
             "AlizCalendar est un produit Aliz permettant de gérer la prise de rendez-vous en ligne de manière personnalisé. " +
             "Les utilisateurs peuvent proposer des sondage en équipe, des webinars ou encore des rendez-vous récurrents",
-        job: "Maquettage • Intégration • front-end • back-end ",
+        job: "Design • Intégration • front-end • back-end ",
         tools: "Symfony • Twig • Figma",
         other: "Tâches cron • Listener • Webhook ",
         logo: require("@/public/images/projects/aliz/logoAliz.webp"),
@@ -166,7 +166,7 @@ export const myProjects: ProjectType[] = [
         longDescription:
             "AlizVerif est un outil de recherche, vérification et nettoyage de données d'entreprises. " +
             "En quelques clics, vos données peuvent être vérifiées, notées et/ou nettoyées en les comparant à plusieurs bases de données fiables (API SIREN, BODACC etc...)",
-        job: "Maquettage • Intégration • front-end",
+        job: "Design • Intégration • front-end",
         tools: "React • Gsap • Figma",
         other: "Webhook • Axios",
         logo: require("@/public/images/projects/aliz/logoAliz.webp"),
@@ -213,7 +213,7 @@ export const myProjects: ProjectType[] = [
             "Application web permettant aux étudiants de rechercher les associations et évènements à proximité. " +
             "Les utilisateurs peuvent également proposer leurs propre évènements et inviter les autres membres de la communauté. " +
             "Un salon à été mis en place pour facilié l'échange entre les utilisateurs. Données extraites d'une api .gouv.",
-        job: "Maquettage • Intégration • front-end • back-end",
+        job: "Design • Intégration • front-end • back-end",
         tools: "React • Gsap • Figma • socket.io",
         other: "Google Maps • filtre de recherche avancés • api.gouv • Axios",
         logo: require("@/public/images/projects/studhelp/logoStudhelp.webp"),
@@ -258,7 +258,7 @@ export const myProjects: ProjectType[] = [
         longDescription:
             "Application mobile pour la recherche de séries, connecté à l'API Betaseries. " +
             "Un filtre de recherche par catégorie, titre et acteur est disponible, avec fiche descriptive de la série séléctionné. Projet d'étude développé sur 4 jours ",
-        job: "Maquettage • Intégration • front-end • back-end",
+        job: "Design • Intégration • front-end • back-end",
         tools: "React Native • Figma",
         other: "api betaseries • Axios",
         logo: require("@/public/images/projects/netflix/logoNetflix.webp"),
@@ -326,4 +326,89 @@ export const myProjects: ProjectType[] = [
             },
         ],
     },
+    {
+        id: 8,
+        slug: "les-chemins-de-la-maison",
+        title: "Éducatrice Spé",
+        titleHover: "Les Chemins De La Maison",
+        shortDescription: "Site vitrine mettant en lumière les services d'une auto-entrepreneuse, éducatrice spécialisée et sexothérapeute.",
+        longDescription: "Création complète d’un site vitrine pour mettre en lumière une auto-entrepreneuse, éducatrice spécialisée et sexothérapeute. Le site présente ses services d’accompagnement pour les enfants TDI/TND, une guidance parentale, ainsi que son expertise en thérapie individuelle et de couple. Je me suis occupé de l’intégralité du projet : design, développement front-end et SEO technique (optimisation des performances, structure sémantique, rédaction des métadonnées, stratégie de mots-clés).",
+        job: "Design • Intégration • front-end",
+        tools: "Next.js • SCSS • Figma • GSAP",
+        other: "Optimisation SEO • Performance Web • Calendly Mobile • Mobile First",
+        logo: require("@/public/images/projects/lesCheminsDeLaMaison/logo.svg"),
+        link: "https://lescheminsdelamaison.fr/",
+        github: false,
+        isMediaDesktop: true,
+        background: "/images/projects/lesCheminsDeLaMaison/homepage.webp",
+        images: [
+            {
+                src: require("@/public/images/projects/lesCheminsDeLaMaison/homepage.webp"),
+                alt: "Page d’accueil du site d'Anne-Sophie Portejoie, éducatrice spécialisée",
+            },
+            {
+                src: require("@/public/images/projects/lesCheminsDeLaMaison/EVRAS-service.webp"),
+                alt: "Page de service : accompagnement EVRAS",
+            },
+            {
+                src: require("@/public/images/projects/lesCheminsDeLaMaison/about-me-page.webp"),
+                alt: "Page à propos d'Anne-Sophie Portejoie, éducatrice spécialisée",
+            },
+            {
+                src: require("@/public/images/projects/lesCheminsDeLaMaison/service-tdi-filter.webp"),
+                alt: "Page de service d'Anne-Sophie Portejoie, Animatrice d’atelier développement des compétences psycho-sociales et aux habilités sociales - TDI & TND",
+            },
+            {
+                src: require("@/public/images/projects/lesCheminsDeLaMaison/contact.webp"),
+                alt: "Page de contact d'Anne-Sophie Portejoie, éducatrice spécialisée",
+            },
+            {
+                src: require("@/public/images/projects/lesCheminsDeLaMaison/social-skills-TDI.webp"),
+                alt: "Page de contact d'Anne-Sophie Portejoie, éducatrice spécialisée",
+            },
+        ],
+    },
+    {
+        id: 9,
+        slug: "amae-production",
+        title: "Amae Production",
+        titleHover: "Amae Production",
+        shortDescription: "Site vitrine mettant en lumière une association spécialisée dans la production audiovisuelle et la création de contenus (festivals, clips, témoignages, portraits...)",
+        longDescription: "Site vitrine mettant en lumière une association qui couvre d’importants festivals, réalise clips, contenus artistiques et projets interactifs pour des événements majeurs, en france métropolitaine et à la Réunion",
+        job: "Design • Intégration • front-end",
+        tools: "Next.js • SCSS • Figma • GSAP",
+        other:
+            "Optimisation SEO • Performance Web • Mobile First",
+        logo: require("@/public/images/projects/amaeProduction/logo.ico"),
+        link: "https://amae-production.fr/",
+        github: false,
+        isMediaDesktop: true,
+        background: "/images/projects/amaeProduction/homepage-dance.webp",
+        images: [
+            {
+                src: require("@/public/images/projects/amaeProduction/homepage-dance.webp"),
+                alt: "",
+            },
+            {
+                src: require("@/public/images/projects/amaeProduction/homepage-fire-festival.webp"),
+                alt: "",
+            },
+            {
+                src: require("@/public/images/projects/amaeProduction/real-page.webp"),
+                alt: "",
+            },
+            {
+                src: require("@/public/images/projects/amaeProduction/team-section.webp"),
+                alt: "",
+            },
+            {
+                src: require("@/public/images/projects/amaeProduction/who-we-are-page.webp"),
+                alt: "",
+            },
+            {
+                src: require("@/public/images/projects/amaeProduction/contact-page.webp"),
+                alt: "",
+            },
+        ],
+    }
 ];

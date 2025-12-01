@@ -31,13 +31,13 @@ export const aboutProjects: AboutProjectType[] = [
     {
         id: 2,
         title: "CMS INTERNE",
-        description: "Développement complet d'un cms avec BO modulaire, système de templating et bibliothèque de type google drive, pensé pour les équipes métier",
+        description: "Développement complet d'un CMS avec BO modulaire, système de templating et bibliothèque de type Google drive, pensé pour les équipes métier",
         icon: BlocksCms
     },
     {
         id: 3,
         title: "PLATEFORME DE SYNERGIE",
-        description: "Maintenance, refonte et évolution d’une plateforme permettant la synergie d'entreprises au sein d’un grand groupe du retail français",
+        description: "Maintenance, refonte et évolution d’une plateforme permettant la synergie d'entreprises et l'optimisation des coûts au sein d’un grand groupe du retail français",
         icon: Synergy
 
     },

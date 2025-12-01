@@ -84,11 +84,11 @@ export default function About({ref}: AboutProps) {
                     entreprises.
                     <br/>
                     <br/>
-                    Aujourd’hui, j’accompagne entreprises et startups dans la mise en place de solutions sur mesure,
+                    Aujourd’hui, j’accompagne entreprises et auto-entrepreneur dans la mise en place de solutions sur
+                    mesure,
                     toujours avec un objectif clair :
                     <br/>
                     <b>apporter de la valeur</b>, rapidement et durablement.
-
                 </p>
 
 
