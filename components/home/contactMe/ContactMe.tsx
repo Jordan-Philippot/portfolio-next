@@ -18,10 +18,10 @@ import Send from "@/components/icons/Send";
 import {toast} from "react-toastify";
 
 interface ContactMeProps {
-    ref: React.Ref<HTMLDivElement> | null,
+    sectionRef: React.Ref<HTMLDivElement> | null,
 }
 
-export default function ContactMe({ref}: ContactMeProps) {
+export default function ContactMe({sectionRef}: ContactMeProps) {
     init(process.env.NEXT_PUBLIC_EMAILJS_PK as string)
 
     const clickMeRef = useRef<HTMLDivElement>(null)
@@ -98,7 +98,7 @@ export default function ContactMe({ref}: ContactMeProps) {
     }
 
     return (
-        <section id="contact" className={`page`} ref={ref}>
+        <section id="contact" className={`page`} ref={sectionRef}>
             <div id="blob-white-animated"></div>
 
 

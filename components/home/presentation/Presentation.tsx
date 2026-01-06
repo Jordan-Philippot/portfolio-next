@@ -10,14 +10,14 @@ import LinkedIn from "@/components/icons/LinkedIn";
 import Github from "@/components/icons/Github";
 
 interface PresentationProps {
-    ref: React.Ref<HTMLDivElement>,
+    sectionRef: React.Ref<HTMLDivElement>,
 }
 
-export default function FirstBlock({ref}: PresentationProps) {
+export default function FirstBlock({sectionRef}: PresentationProps) {
     return (
         <section
             id="home"
-            ref={ref}
+            ref={sectionRef}
         >
             <div className="content">
                 <div className="blob">

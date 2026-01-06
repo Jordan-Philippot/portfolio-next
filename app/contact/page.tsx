@@ -24,7 +24,7 @@ export const metadata: CustomMetadata = generateMetadata({
 export default function Contact() {
     return (
         <>
-            <ContactMeComponent ref={null}/>
+            <ContactMeComponent sectionRef={null}/>
 
             {/* JSON-LD */}
             <Script

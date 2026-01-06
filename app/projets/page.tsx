@@ -27,7 +27,7 @@ export default function Projects() {
     return (
         <>
             <div id="projects" className="page">
-                <ProjectsComponent ref={null}/>
+                <ProjectsComponent sectionRef={null}/>
             </div>
 
             {/* JSON-LD Structured Data */}

@@ -1,52 +1,60 @@
 'use client'
 
-import React from 'react'
+import React, {useEffect} from 'react'
 
 // ----- Services -----
 import {myProjects} from '@/lib/data/projects'
 
 // ----- Packages -----
 import gsap, {Power2} from 'gsap'
+import {ScrollTrigger} from 'gsap/ScrollTrigger'
+
 import ProjectCarousel from "@/components/home/myProjects/ProjetsCarousel";
 
 interface ProjectsProps {
-    ref: React.Ref<HTMLDivElement> | null
+    sectionRef?: React.Ref<HTMLDivElement>
 }
 
-export default function Projects({ref}: ProjectsProps) {
+gsap.registerPlugin(ScrollTrigger)
 
-    const sections = document.querySelectorAll('.oneProject');
+export default function Projects({sectionRef}: ProjectsProps) {
 
-    sections.forEach((section, index) => {
-        const tl1 = gsap.timeline(
-            {
+    useEffect(() => {
+        const sections = document.querySelectorAll('.oneProject');
+
+        sections.forEach((section, index) => {
+            gsap.timeline({
                 scrollTrigger: {
                     trigger: section,
                     start: 'top-=800',
                     toggleActions: 'play none none reverse',
                     end: () => `+=${section.clientHeight / 2}`,
-                    markers: false
                 }
-            });
-        tl1.fromTo(section,
-            {
-                x: index % 2 === 0 ? -100 : 100,
-                opacity: 0,
-            },
-            {
-                x: 0,
-                opacity: 1,
-                ease: Power2.easeOut,
-                duration: 2
-            }
-        );
-    })
+            }).fromTo(
+                section,
+                {
+                    x: index % 2 === 0 ? -100 : 100,
+                    opacity: 0,
+                },
+                {
+                    x: 0,
+                    opacity: 1,
+                    ease: Power2.easeOut,
+                    duration: 2
+                }
+            );
+        });
+
+        return () => {
+            ScrollTrigger.getAll().forEach(t => t.kill());
+        };
+    }, []);
 
 
     return (
         <section
             id="projects"
-            ref={ref}
+            ref={sectionRef}
         >
             <div id="blob1"></div>
             <div id="blob2"></div>

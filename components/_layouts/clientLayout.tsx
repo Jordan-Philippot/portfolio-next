@@ -25,16 +25,15 @@ export default function ClientLayout({children}: ClientLayoutProps) {
 
     return (
         <>
-            {!loaded ?
-                <Loader/> :
+            <div className="App">
+                <Cursor/>
+                <Header/>
+                {children}
+                <Waves wavesRef={wavesRef}/>
+                <Footer/>
+            </div>
 
-                <div className="App">
-                    <Cursor/>
-                    <Header/>
-                    {children}
-                    <Waves wavesRef={wavesRef}/>
-                    <Footer/>
-                </div>}
+            {!loaded && <Loader/>}
 
             <ToastContainer
                 position="top-center"

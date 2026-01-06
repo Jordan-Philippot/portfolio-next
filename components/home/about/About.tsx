@@ -1,14 +1,13 @@
 import React, {useEffect, useRef} from "react";
 import {aboutProjects, aboutSkills, aboutTools, SkillType} from "@/lib/data/about";
-import Image from "next/image";
 import gsap, {Power2} from "gsap";
 import {ScrollTrigger} from "gsap/dist/ScrollTrigger";
 
 interface AboutProps {
-    ref: React.Ref<HTMLDivElement>,
+    sectionRef: React.Ref<HTMLDivElement>,
 }
 
-export default function About({ref}: AboutProps) {
+export default function About({sectionRef}: AboutProps) {
     const smokyPresentationRef = useRef<HTMLParagraphElement>(null);
     const smokyDescriptionRef = useRef<HTMLParagraphElement>(null);
     const infiniteRef = useRef<HTMLDivElement>(null);
@@ -43,7 +42,7 @@ export default function About({ref}: AboutProps) {
     return (
         <section
             id="about"
-            ref={ref}
+            ref={sectionRef}
         >
             <h2>À propos</h2>
 

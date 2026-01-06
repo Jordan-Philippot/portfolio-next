@@ -71,16 +71,16 @@ export default function HomeClient() {
     return (
         <div id="homepage" className="page">
             {/* ----- PRESENTATION ----- */}
-            <PresentationComponent ref={PresentationComponentRef}/>
+            <PresentationComponent sectionRef={PresentationComponentRef}/>
 
             {/* ----- ABOUT ME ----- */}
-            <AboutComponent ref={AboutComponentRef}/>
+            <AboutComponent sectionRef={AboutComponentRef}/>
 
             {/* ----- MY PROJECTS ----- */}
-            <ProjectsComponent ref={ProjectsComponentRef}/>
+            <ProjectsComponent sectionRef={ProjectsComponentRef}/>
 
             {/* ----- CONTACT ME ----- */}
-            <ContactMeComponent ref={ContactMeComponentRef}/>
+            <ContactMeComponent sectionRef={ContactMeComponentRef}/>
         </div>
     )
 }
