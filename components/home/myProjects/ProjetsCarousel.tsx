@@ -1,8 +1,9 @@
 "use client";
 import {useEffect, useRef, useState} from "react";
 import gsap from "gsap";
-import Draggable from "gsap/Draggable";
+import Draggable from "gsap/dist/Draggable";
 
+gsap.registerPlugin(Draggable);
 import type {ProjectType} from "@/lib/data/projects";
 import Link from "next/link";
 import ArrowRight from "@/components/icons/ArrowRight";
