@@ -1,7 +1,8 @@
+'use client'
 import React, {useEffect, useState} from 'react'
 
 // Packages
-import gsap, {Power1, Power4} from 'gsap';
+import gsap, {Power4} from 'gsap';
 
 // Images
 import EllipseLogo from '@/public/images/logo.webp'

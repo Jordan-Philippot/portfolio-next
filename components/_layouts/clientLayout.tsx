@@ -22,6 +22,9 @@ export default function ClientLayout({children}: ClientLayoutProps) {
         }, 5000);
     }, [])
 
+    if (!loaded) {
+        return <Loader/>;
+    }
 
     return (
         <>
@@ -33,7 +36,6 @@ export default function ClientLayout({children}: ClientLayoutProps) {
                 <Footer/>
             </div>
 
-            {!loaded && <Loader/>}
 
             <ToastContainer
                 position="top-center"

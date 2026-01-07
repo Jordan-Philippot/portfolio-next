@@ -103,7 +103,9 @@ $shadowTwo: #ffffff36;
   overflow-x: hidden;
   width: 100vw;
   height: 100vh;
-  position: relative;
+  position: fixed;
+  z-index: 1000 !important;
+  background-color: black;
   /* Blob on center */
   #blob-white-animated {
     position: absolute;
