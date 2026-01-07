@@ -22,9 +22,6 @@ export default function ClientLayout({children}: ClientLayoutProps) {
         }, 5000);
     }, [])
 
-    if (!loaded) {
-        return <Loader/>;
-    }
 
     return (
         <>
@@ -34,6 +31,8 @@ export default function ClientLayout({children}: ClientLayoutProps) {
                 {children}
                 <Waves wavesRef={wavesRef}/>
                 <Footer/>
+                {!loaded && <Loader/>}
+
             </div>
 
 
