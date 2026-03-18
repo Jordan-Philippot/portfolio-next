@@ -55,12 +55,26 @@
         text-align: center;
         background-color: #101010;
         box-shadow: 0 0 8px 1px $darkblue;
+
+
+        a {
+          color: white;
+          width: fit-content;
+          margin: 8px auto 0 auto;
+        }
+
         @include md {
           width: 300px;
+          p {
+            min-height: 100px;
+          }
         }
         @include lg {
           width: 350px;
           padding: 16px 32px 32px 32px;
+          p {
+            min-height: 70px;
+          }
         }
 
         svg {

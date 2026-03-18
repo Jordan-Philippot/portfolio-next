@@ -2,6 +2,7 @@ import React, {useEffect, useRef} from "react";
 import {aboutProjects, aboutSkills, aboutTools, SkillType} from "@/lib/data/about";
 import gsap, {Power2} from "gsap";
 import {ScrollTrigger} from "gsap/dist/ScrollTrigger";
+import Link from "next/link";
 
 interface AboutProps {
     sectionRef: React.Ref<HTMLDivElement>,
@@ -66,8 +67,9 @@ export default function About({sectionRef}: AboutProps) {
                     {aboutProjects.map((project, index) => (
                         <div className="card" key={index}>
                             <project.icon width={32} height={32}/>
-                            <h3> {project?.title}</h3>
-                            <p>{project?.description}</p>
+                            <h3> {project.title}</h3>
+                            <p>{project.description}</p>
+                            <Link href={`/blog/${project.slug}`} className={"btn-default btn-darkBlue"}>Consulter</Link>
                         </div>
                     ))}
                 </div>

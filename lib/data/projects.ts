@@ -402,7 +402,7 @@ export const myProjects: ProjectType[] = [
                 alt: "",
             },
             {
-                src: require("@/public/images/projects/amaeProduction/who-we-are-page.webp"),
+                src: require("@/public/images/projects/amaeProduction/contact-page.webp"),
                 alt: "",
             },
             {

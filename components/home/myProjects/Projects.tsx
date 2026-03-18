@@ -12,12 +12,13 @@ import {ScrollTrigger} from 'gsap/ScrollTrigger'
 import ProjectCarousel from "@/components/home/myProjects/ProjetsCarousel";
 
 interface ProjectsProps {
-    sectionRef?: React.Ref<HTMLDivElement>
+    sectionRef?: React.Ref<HTMLDivElement>,
+    isPage?: Boolean
 }
 
 gsap.registerPlugin(ScrollTrigger)
 
-export default function Projects({sectionRef}: ProjectsProps) {
+export default function Projects({sectionRef, isPage}: ProjectsProps) {
 
     useEffect(() => {
         const sections = document.querySelectorAll('.oneProject');
@@ -58,9 +59,7 @@ export default function Projects({sectionRef}: ProjectsProps) {
         >
             <div id="blob1"></div>
             <div id="blob2"></div>
-
-            <h2>Mes Projets</h2>
-
+            {isPage ? <h1>Mes Projets</h1> : <h2>Mes Projets</h2>}
             <ProjectCarousel slides={myProjects}/>
         </section>
     )

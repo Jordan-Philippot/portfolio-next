@@ -8,7 +8,8 @@ export interface AboutProjectType {
     id: number;
     title: string;
     description: string;
-    icon: React.FC<IconProps>
+    icon: React.FC<IconProps>;
+    slug: string;
 }
 
 export interface SkillType {
@@ -26,20 +27,23 @@ export const aboutProjects: AboutProjectType[] = [
         id: 1,
         title: "E-COMMERCE",
         description: "Refonte complète du front-end avec implémentation d’un rendu côté serveur (SSR) optimisé, pour un grand groupe du retail belge.",
-        icon: ShoppingCart
+        icon: ShoppingCart,
+        slug: "e-commerce-retail"
     },
     {
         id: 2,
-        title: "CMS INTERNE",
-        description: "Développement complet d'un CMS avec BO modulaire, système de templating et bibliothèque de type Google drive, pensé pour les équipes métier",
-        icon: BlocksCms
+        title: "DXP",
+        description: "Développement d'un DXP en interne avec Back-Office modulaire, système de templating et bibliothèque de type Google drive, pensé pour les équipes métier",
+        icon: BlocksCms,
+        slug: "dxp"
+
     },
     {
         id: 3,
         title: "PLATEFORME DE SYNERGIE",
         description: "Maintenance, refonte et évolution d’une plateforme permettant la synergie d'entreprises et l'optimisation des coûts au sein d’un grand groupe du retail français",
-        icon: Synergy
-
+        icon: Synergy,
+        slug: "plateforme-synergies-d-entreprise"
     },
 ];
 

@@ -1,0 +1,36 @@
+@use "../../tools/variables" as *;
+
+#blob1 {
+  position: absolute;
+  top: 0;
+  left: -35vw;
+  background: $lightblue;
+  background: linear-gradient(90deg, $lightblue 20%, rgba(28, 76, 255, 1) 83%);
+
+  width: 100vw;
+  height: 60vw;
+  border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%;
+  animation: morph 5s linear infinite;
+  display: block;
+}
+
+#blob2 {
+  position: absolute;
+  top: 0;
+  right: -35vw;
+  display: block;
+  background: $lightblue;
+  background: linear-gradient(90deg, rgba(28, 76, 255, 1) 20%, $lightblue 83%);
+  width: 100vw;
+  height: 60vw;
+  border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%;
+  animation: morph 5s linear infinite;
+  z-index: 1;
+}
+
+@include lg {
+  #blob1,
+  #blob2 {
+    width: 75vw;
+  }
+}
