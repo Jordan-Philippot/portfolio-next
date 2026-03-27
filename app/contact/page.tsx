@@ -35,7 +35,7 @@ export default function Contact() {
                     __html: generateJsonLD("AboutPage", {
                         title: metadata.title as string,
                         description: metadata.description as string,
-                        path: "/contact",
+                        path: metadata.path as string,
                         image: "/images/logo.webp",
                         sameAs: [
                             process.env.NEXT_PUBLIC_LINKEDIN_LINK as string,

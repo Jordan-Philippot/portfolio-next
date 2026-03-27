@@ -36,7 +36,7 @@ export default function Home() {
                     __html: generateJsonLD("WebSite", {
                         title: metadata.title as string,
                         description: metadata.description as string,
-                        path: "/",
+                        path: metadata.path as string,
                         image: "/images/logo.webp",
                     }),
                 }}

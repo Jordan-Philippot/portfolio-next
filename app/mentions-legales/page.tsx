@@ -55,7 +55,7 @@ export default function LegalNotice() {
                     __html: generateJsonLD("AboutPage", {
                         title: metadata.title as string,
                         description: metadata.description as string,
-                        path: "/mentions-legales",
+                        path: metadata.path as string,
                         image: "/images/logo.webp",
                         sameAs: [
                             "https://www.linkedin.com/in/jordan-philippot",
