@@ -1,11 +1,12 @@
 @use "../../tools/variables" as *;
 
 #projects {
-  min-height: 100vh;
+  min-height: 100dvh;
   height: auto;
   position: relative;
   font-size: 120px;
-  overflow-x: hidden;
+  overflow: visible;
+
 
   @include lg {
     padding-bottom: 70px;
