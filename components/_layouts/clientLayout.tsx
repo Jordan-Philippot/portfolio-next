@@ -23,6 +23,18 @@ export default function ClientLayout({children}: ClientLayoutProps) {
     }, [])
 
 
+    useEffect(() => {
+        if (!loaded) {
+            document.body.style.overflow = "hidden";
+        } else {
+            document.body.style.overflow = "auto";
+        }
+
+        return () => {
+            document.body.style.overflow = "auto";
+        };
+    }, [loaded]);
+
     return (
         <>
             <div className="App">
