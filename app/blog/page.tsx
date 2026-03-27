@@ -4,9 +4,9 @@ import BlogClient from "@/app/blog/BlogClient";
 
 
 export const metadata: CustomMetadata = generateMetadata({
-    title: "Jordan Philippot – Développeur Full-Stack JavaScript",
+    title: "Blog – Jordan Philippot, Développeur Full-Stack JavaScript",
     description:
-        "Développeur Full-Stack spécialisé en JavaScript (React, Next.js, Node.js) et PHP (Symfony) avec 5 ans d’expérience, sur la métropole lilloise. Création d’applications web performantes, modernes et scalables.",
+        "Articles sur le développement web Full-Stack JavaScript (React, Next.js, Node.js). Astuces, bonnes pratiques et projets modernes.",
     path: "/",
     keywords: [
         "développeur fullstack",
