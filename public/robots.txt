@@ -1,3 +1,3 @@
 User-agent: *
 Allow: /
-Sitemap: https://jordan-philippot.fr/sitemap.xml
+Sitemap: https://old.jordan-philippot.fr/sitemap.xml

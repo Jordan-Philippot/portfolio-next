@@ -8,8 +8,8 @@ export default function RootLayout({children}: Readonly<{ children: React.ReactN
     return (
         <html lang="fr">
         <Head>
-            <link rel="alternate" href="https://jordan-philippot.fr/" hrefLang="fr"/>
-            <link rel="canonical" href="https://jordan-philippot.fr/"/>
+            <link rel="alternate" href="https://old.jordan-philippot.fr/" hrefLang="fr"/>
+            <link rel="canonical" href="https://old.jordan-philippot.fr/"/>
         </Head>
         <body>
         <ClientLayout>
